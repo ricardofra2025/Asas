@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="images/favicon.png" rel="apple-touch-icon" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Identidade Visual - Asas Familiar</title>
+
+    <link href="css/typography.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* Reset básico para o exemplo não ficar quebrado */
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- AQUI COMEÇA O SEU CÓDIGO PERSONALIZADO --- */
+
+        /* --- CORES DA MARCA ASAS FAMILIAR --- */
+        :root {
+            --asas-azul: #003B70;
+            /* Azul extraído da logo */
+            --asas-vermelho: #E6302A;
+            /* Vermelho extraído da logo */
+        }
+
+        /* Títulos e Textos Importantes em Azul */
+        h1,
+        h2,
+        h3,
+        h4,
+        .heading-h1,
+        .heading-h2 {
+            color: var(--asas-azul) !important;
+        }
+
+        /* Destaques em Vermelho (ex: "Homenagens", "Humanizada") */
+        .text-span,
+        .text-span-2 {
+            color: var(--asas-vermelho) !important;
+        }
+
+        /* Botões Principais (Azul) */
+        .primary-button,
+        .secondary-button,
+        .secondary-button-white {
+            background-color: var(--asas-azul) !important;
+            border-color: var(--asas-azul) !important;
+            color: #ffffff !important;
+            padding: 15px 30px;
+            /* Adicionei padding para o botão ter forma */
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            /* Transição suave */
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        /* Efeito ao passar o mouse (Fica Vermelho) */
+        .primary-button:hover,
+        .secondary-button:hover,
+        .secondary-button-white:hover {
+            background-color: var(--asas-vermelho) !important;
+            border-color: var(--asas-vermelho) !important;
+        }
+
+        /* Menu Ativo e Links */
+        .menu-link.w--current,
+        .nav-link:hover {
+            color: var(--asas-azul) !important;
+            font-weight: 600;
+        }
+
+        /* Rodapé em Azul */
+        .footer {
+            background-color: #f5f7fa;
+            border-top: 1px solid #e0e0e0;
+            padding: 40px 0;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .footer p,
+        .footer a {
+            color: var(--asas-azul) !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="padding: 20px; border-bottom: 1px solid #eee;">
+        <div class="container" style="padding: 0; display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="margin:0;">Logo Asas</h3>
+
+            <nav>
+                <a href="#" class="menu-link w--current" style="margin-right: 15px; text-decoration: none;">Início</a>
+                <a href="#" class="menu-link" style="margin-right: 15px; text-decoration: none; color: #666;">Sobre</a>
+                <a href="#" class="menu-link" style="text-decoration: none; color: #666;">Contato</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h1 class="heading-h1">
+            Acolhimento que transforma o luto em <span class="text-span">Homenagens</span>
+        </h1>
+
+        <p style="color: #666; line-height: 1.6; margin-bottom: 30px;">
+            Na ASAS FAMILIAR oferecemos Assistência Funeral completa. Note como o título acima usa o Azul da marca, e a
+            palavra "Homenagens" usa o Vermelho vibrante para destaque.
+        </p>
+
+        <a href="#" class="primary-button">
+            Falar com Atendente 24h
+        </a>
+
+        <hr style="margin: 50px 0; border: 0; border-top: 1px solid #eee;">
+
+        <h2 class="heading-h2">Nossos Planos</h2>
+        <p>Exemplo de subtítulo utilizando a variável de cor azul.</p>
+
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>© 2025 ASAS Familiar - Todos os direitos reservados.</p>
+            <p>Av. Borges de Medeiros Nº410, Sala 710 / Centro - POA</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

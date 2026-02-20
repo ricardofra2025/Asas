@@ -1,0 +1,93 @@
+/* variables.css - Identidade Visual ASAS Familiar */
+
+:root {
+    /* Cores principais do projeto */
+    --primary-color: #063e71;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --background-color: #f5f5f5;
+    --text-color: #333333;
+
+    /* Fontes */
+    --main-font: 'IBM Plex Sans', Arial, sans-serif;
+    --heading-font: 'IBM Plex Serif', Arial, serif;
+}
+
+/* Ajuste visual do logo Asas */
+.logo-asas {
+    max-width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 8px 0;
+}
+/* Aplicação Global */
+body {
+    font-family: var(--main-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Títulos Forçados para Azul da Marca */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-h1,
+.heading-h2,
+.heading-h3 {
+    font-family: var(--main-font);
+    color: var(--primary-color) !important;
+    font-weight: 700;
+}
+
+/* Destaques de texto em Vermelho */
+.text-span,
+.text-span-2 {
+    color: var(--secondary-color) !important;
+}
+
+/* --- Botões Padronizados --- */
+.primary-button,
+.secondary-button,
+.secondary-button-white {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.primary-button:hover,
+.secondary-button:hover,
+.secondary-button-white:hover {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+/* --- Menu e Links --- */
+.menu-link.w--current,
+.nav-link:hover,
+.dropdown-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.dropdown-icon {
+    color: var(--primary-color) !important;
+}
+
+/* --- Rodapé --- */
+.footer {
+    background-color: var(--background-light);
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer p,
+.footer a {
+    color: var(--primary-color) !important;
+}
