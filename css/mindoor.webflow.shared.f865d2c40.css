@@ -184,7 +184,7 @@ td, th {
   font-style: normal;
   font-weight: normal;
   line-height: 1;
-  font-family: webflow-icons !important;
+  font-family: webflow-icons;
 }
 
 .w-icon-slider-right:before {
@@ -236,7 +236,7 @@ img {
 }
 
 html.w-mod-touch * {
-  background-attachment: scroll !important;
+  background-attachment: scroll;
 }
 
 .w-block {
@@ -279,7 +279,7 @@ input.w-button {
 }
 
 html[data-w-dynpage] [data-w-cloak] {
-  color: #0000 !important;
+  color: #0000;
 }
 
 .w-code-block {
@@ -348,24 +348,24 @@ pre.w-code-block code {
   white-space: nowrap;
   cursor: pointer;
   box-shadow: 0 0 0 1px #0000001a, 0 1px 3px #0000001a;
-  visibility: visible !important;
-  opacity: 1 !important;
-  z-index: 2147483647 !important;
-  color: #aaadb0 !important;
-  overflow: unset !important;
-  background-color: #fff !important;
-  border-radius: 3px !important;
-  width: auto !important;
-  height: auto !important;
-  margin: 0 !important;
-  padding: 6px !important;
-  font-size: 12px !important;
-  line-height: 14px !important;
-  text-decoration: none !important;
-  display: inline-block !important;
-  position: fixed !important;
-  inset: auto 12px 12px auto !important;
-  transform: none !important;
+  visibility: visible;
+  opacity: 1;
+  z-index: 2147483647;
+  color: #aaadb0;
+  overflow: unset;
+  background-color: #fff;
+  border-radius: 3px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 6px;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+  display: inline-block;
+  position: fixed;
+  inset: auto 12px 12px auto;
+  transform: none;
 }
 
 .w-webflow-badge > img {

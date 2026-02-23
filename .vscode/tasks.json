@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Minificar CSS e JS",
+			"type": "shell",
+			"command": "npx minify css/variables.css -o css/variables.min.css && npx minify css/mindoor.webflow.shared.f865d2c40.css -o css/mindoor.webflow.shared.min.css && npx minify js/webflow-script.js -o js/webflow-script.min.js && npx minify js/jquery.js -o js/jquery.min.js",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
