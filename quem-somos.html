@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html data-wf-page="69420cbdd4e2e39b5eb779a2" data-wf-site="69420cbdd4e2e39b5eb779c2" lang="pt-br">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Quem Somos - ASAS Familiar</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta content="Webflow" name="generator" />
+
+	<link href="css/mindoor.webflow.shared.f865d2c40.css" rel="stylesheet" type="text/css" />
+	<link href="css/variables.css" rel="stylesheet" type="text/css" />
+	<link href="css/typography.css" rel="stylesheet" type="text/css" />
+	<link href="css/padrao-historia.css" rel="stylesheet" type="text/css" />
+
+	<link href="images/favicon.png?v=1" rel="icon" type="image/png" sizes="32x32" />
+	<link href="images/favicon.png?v=1" rel="apple-touch-icon" sizes="180x180" />
+	<link href="images/favicon.png?v=1" rel="shortcut icon" type="image/png" />
+
+	<link href="https://fonts.googleapis.com" rel="preconnect" />
+	<link href="https://fonts.gstatic.com" rel="preconnect" />
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+	<script
+		type="text/javascript">WebFont.load({ google: { families: ["IBM Plex Sans:100,200,300,regular,500,600,700", "IBM Plex Serif:100,200,300,regular,500,600,700"] } });</script>
+	<script
+		type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.header.w-nav {
+			position: sticky;
+			top: 0;
+			z-index: 999;
+			background-color: #fff;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+			padding: 10px 0;
+			height: auto;
+		}
+
+		.nav-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
+
+		.site-logo {
+			max-height: 80px;
+			width: auto;
+			display: block;
+		}
+
+		.nav-logo,
+		.site-logo,
+		.menu-link,
+		.dropdown-trigger,
+		.primary-button {
+			outline: none !important;
+			box-shadow: none !important;
+			-webkit-tap-highlight-color: transparent;
+		}
+
+		.nav-logo:focus, .nav-logo:active,
+		.site-logo:focus, .site-logo:active,
+		.menu-link:focus, .menu-link:active,
+		.dropdown-trigger:focus, .dropdown-trigger:active,
+		.primary-button:focus, .primary-button:active {
+			outline: none !important;
+			box-shadow: none !important;
+		}
+
+		.nav-logo:active,
+		.nav-logo:hover,
+		.menu-link:active,
+		.menu-link:hover,
+		.w-nav-brand:active,
+		.w-nav-brand:hover {
+			background-color: transparent !important;
+		}
+
+		.menu-item-wrapper {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+		}
+
+		.menu-items {
+			display: flex;
+			gap: 30px;
+			align-items: center;
+		}
+
+		.menu-link {
+			color: var(--primary-color) !important;
+			font-weight: 500;
+			text-decoration: none;
+			font-size: 20px;
+			padding: 10px 0;
+		}
+
+		.nav-button-wrapper {
+			margin-left: 20px;
+		}
+
+		.primary-button {
+			background-color: var(--primary-color) !important;
+			color: #fff !important;
+			padding: 12px 24px;
+			border-radius: 6px;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 14px;
+			border: none;
+			transition: background 0.3s;
+		}
+
+		.primary-button:hover {
+			background-color: var(--secondary-color) !important;
+		}
+
+		.dropdown-menu-wrapper {
+			position: relative;
+		}
+
+		.dropdown-menu {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background: #fff;
+			box-shadow: 0 4px 16px rgba(0, 59, 112, 0.08);
+			border-radius: 8px;
+			min-width: 180px;
+			z-index: 100;
+			padding: 12px 0;
+			border: 1px solid #e5e5e5;
+		}
+
+		.dropdown-menu.show {
+			display: block;
+			animation: fadeInDropdown 0.2s;
+		}
+
+		@keyframes fadeInDropdown {
+			from {
+				opacity: 0;
+				transform: translateY(-10px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.dropdown-link {
+			display: block;
+			padding: 10px 24px;
+			color: var(--primary-color);
+			text-decoration: none;
+			font-weight: 500;
+			transition: background 0.2s;
+		}
+
+		.dropdown-link:hover {
+			background: #f5f5f5;
+			color: var(--secondary-color);
+		}
+
+		.page-banner {
+			background: linear-gradient(135deg, #003B70 0%, #004b85 100%);
+			padding: 80px 20px;
+			text-align: center;
+			color: #fff;
+		}
+
+		.page-banner h1 {
+			font-size: 3rem;
+			font-weight: 700;
+			margin: 0 0 20px 0;
+			color: #e74c3c;
+		}
+
+		.page-banner p {
+			font-size: 1.2rem;
+			max-width: 800px;
+			margin: 0 auto;
+			line-height: 1.6;
+		}
+
+		.sobre-section {
+			padding: 80px 20px;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		.sobre-logo-wrapper {
+			text-align: center;
+			margin-bottom: 45px;
+		}
+
+		.sobre-logo {
+			max-width: 300px;
+			width: 100%;
+			height: auto;
+		}
+
+		.sobre-title {
+			color: #003B70;
+			font-size: 1.8rem;
+			font-weight: 700;
+			margin-bottom: 30px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+
+		.sobre-content p {
+			font-size: 1.1rem;
+			line-height: 1.8;
+			color: #444;
+			margin-bottom: 25px;
+			text-align: justify;
+		}
+
+		.pilares-title {
+			color: #e74c3c;
+			font-size: 2rem;
+			font-weight: 700;
+			text-align: center;
+			margin: 40px 0 25px;
+			text-transform: uppercase;
+		}
+
+		.pilar-card {
+			background: #fff;
+			border: 1px solid #e5e5e5;
+			border-radius: 8px;
+			padding: 20px;
+			margin-bottom: 15px;
+		}
+
+		.pilar-card h3 {
+			color: #003B70;
+			margin: 0 0 10px;
+			font-size: 1.2rem;
+		}
+
+		.pilar-card p,
+		.pilar-card li {
+			margin: 0;
+			color: #444;
+			line-height: 1.7;
+		}
+
+		.footer {
+			background: #f5f5f5;
+			color: #003B70;
+			padding: 30px 20px 20px 20px;
+		}
+
+		.footer-content {
+			max-width: 800px;
+			margin: 0 auto;
+			text-align: left;
+		}
+
+		.footer-logo {
+			max-width: 80px;
+			margin-bottom: 15px;
+		}
+
+		.footer-info {
+			margin-bottom: 10px;
+		}
+
+		.footer-info p {
+			color: #003B70;
+			margin: 5px 0;
+			font-size: 0.95rem;
+			line-height: 1.5;
+		}
+
+		.footer-bottom {
+			text-align: center;
+			padding-top: 15px;
+			border-top: 1px solid #d0d0d0;
+			margin-top: 15px;
+		}
+
+		.footer-bottom p {
+			color: #003B70;
+			font-size: 0.85rem;
+			margin: 0;
+		}
+
+		.nav-trigger {
+			display: none;
+			flex-direction: column;
+			gap: 6px;
+			cursor: pointer;
+			background: none;
+			border: none;
+			padding: 10px;
+		}
+
+		.nav-trigger span {
+			display: block;
+			width: 25px;
+			height: 3px;
+			background-color: #003B70;
+			border-radius: 3px;
+			transition: all 0.3s ease;
+		}
+
+		.nav-trigger.active span:nth-child(1) {
+			transform: rotate(45deg) translate(10px, 10px);
+		}
+
+		.nav-trigger.active span:nth-child(2) {
+			opacity: 0;
+		}
+
+		.nav-trigger.active span:nth-child(3) {
+			transform: rotate(-45deg) translate(7px, -7px);
+		}
+
+		@media (max-width: 1024px) {
+			.nav-trigger {
+				display: flex;
+			}
+
+			.menu-wrapper {
+				position: absolute;
+				top: 80px;
+				left: 0;
+				right: 0;
+				background: #fff;
+				flex-direction: column;
+				gap: 0;
+				padding: 0;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+				display: none !important;
+				max-height: calc(100vh - 80px);
+				overflow-y: auto;
+				z-index: 1000;
+			}
+
+			.menu-wrapper.open {
+				display: flex !important;
+			}
+
+			.menu-item-wrapper {
+				flex: 1;
+				justify-content: flex-start;
+				flex-direction: column;
+				width: 100%;
+			}
+
+			.menu-items {
+				flex-direction: column;
+				gap: 0;
+				width: 100%;
+				align-items: flex-start;
+			}
+
+			.menu-link {
+				width: 100%;
+				padding: 18px 25px !important;
+				font-size: 18px !important;
+				border-bottom: 1px solid #f0f0f0;
+				display: block;
+			}
+
+			.dropdown-menu-wrapper {
+				width: 100%;
+			}
+
+			.dropdown-trigger {
+				width: 100%;
+				text-align: left;
+			}
+
+			.dropdown-menu {
+				position: static;
+				background: #f9f9f9;
+				box-shadow: none;
+				border: none;
+				border-radius: 0;
+				min-width: 100%;
+				display: none;
+				padding: 0;
+			}
+
+			.dropdown-menu.show {
+				display: block;
+			}
+
+			.dropdown-link {
+				padding: 15px 25px 15px 45px;
+				font-size: 16px;
+				border-bottom: 1px solid #e5e5e5;
+			}
+
+			.nav-button-wrapper {
+				margin-left: 0;
+				width: 100%;
+				padding: 15px 25px;
+				border-top: 1px solid #f0f0f0;
+			}
+
+			.nav-button-wrapper .primary-button {
+				width: 100%;
+				text-align: center;
+				padding: 14px 24px;
+			}
+
+			.header.w-nav {
+				padding: 0;
+			}
+
+			.nav-wrapper {
+				padding: 15px 20px;
+			}
+
+			.site-logo {
+				max-height: 60px;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.page-banner h1 {
+				font-size: 2rem;
+			}
+
+			.sobre-logo {
+				max-width: 220px;
+			}
+
+			.sobre-content p {
+				font-size: 1rem;
+			}
+
+			.menu-link {
+				font-size: 17px !important;
+				padding: 16px 20px !important;
+			}
+
+			.dropdown-link {
+				padding: 12px 20px 12px 40px;
+				font-size: 15px;
+			}
+
+			.nav-button-wrapper {
+				padding: 12px 20px;
+			}
+
+			.nav-wrapper {
+				padding: 12px 15px;
+			}
+
+			.site-logo {
+				max-height: 50px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.menu-link {
+				font-size: 16px !important;
+				padding: 14px 15px !important;
+			}
+
+			.dropdown-link {
+				padding: 12px 15px 12px 35px;
+				font-size: 14px;
+			}
+
+			.nav-button-wrapper {
+				padding: 10px 15px;
+			}
+
+			.nav-wrapper {
+				padding: 10px 12px;
+			}
+
+			.site-logo {
+				max-height: 45px;
+			}
+
+			.nav-trigger span {
+				width: 22px;
+				height: 2.5px;
+			}
+
+			.menu-wrapper {
+				top: 70px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<div data-animation="default" class="header w-nav" role="banner">
+		<div class="container">
+			<div class="main-container w-container">
+				<div class="nav-wrapper">
+
+					<a href="index.html" class="nav-logo w-nav-brand">
+						<img loading="lazy" src="images/logo-asas.png" alt="Asas Familiar" class="site-logo" />
+					</a>
+
+					<nav role="navigation" class="menu-wrapper w-nav-menu"
+						style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
+
+						<div class="menu-item-wrapper">
+							<div class="menu-items">
+								<a href="index.html" class="menu-link" style="color: #003B70;">Home</a>
+
+								<div class="dropdown-menu-wrapper" style="position: relative;">
+									<a href="#" class="menu-link dropdown-trigger" style="color: #003B70;">Quem Somos ▾</a>
+									<div class="dropdown-menu">
+										<a href="quem-somos.html" class="dropdown-link">Sobre nós</a>
+										<a href="historia.html" class="dropdown-link">Nossa história</a>
+										<a href="diretoria.html" class="dropdown-link">Diretoria</a>
+										<a href="parceiros.html" class="dropdown-link">Parceiros</a>
+									</div>
+								</div>
+
+								<a href="servicos.html" class="menu-link" style="color: #003B70;">Nossos Serviços</a>
+								<a href="index.html#contato" class="menu-link" style="color: #003B70;">Contato</a>
+							</div>
+						</div>
+
+						<div class="nav-button-wrapper">
+							<a href="https://wa.me/5551980201159" target="_blank" class="primary-button w-inline-block">
+								Falar com Atendente
+							</a>
+						</div>
+
+					</nav>
+
+					<div class="nav-trigger w-nav-button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="page-banner">
+		<h1>Quem Somos</h1>
+		<p>"Transformamos cuidado em legado, com excelência em assistência familiar e acolhimento humanizado no Sul do Brasil."</p>
+	</section>
+
+	<section class="sobre-section">
+		<div class="sobre-logo-wrapper">
+			<img src="images/logo-asas-colorida.png" alt="ASAS Familiar Logo" class="sobre-logo" />
+		</div>
+
+		<h2 class="sobre-title">Sobre Nós</h2>
+
+		<div class="sobre-content">
+			<p>Fundada em 2025, em Porto Alegre-RS, a <strong>ASAS FAMILIAR</strong> é uma associação sem fins lucrativos, dedicada à assistência social, familiar e funerária.</p>
+			<p>Com sede na Av. Borges de Medeiros, nº 410, 7º andar, Centro Histórico de Porto Alegre-RS, nossa instituição nasceu com o propósito de oferecer acolhimento humanizado, orientação jurídica e suporte emocional às famílias em momentos de despedida.</p>
+			<p>Nossa atuação integra serviços funerários, suporte emocional, orientação jurídica e benefícios em saúde, com atendimento em toda a região do Rio Grande do Sul.</p>
+			<p>Valorizamos transparência, humanização, empatia, responsabilidade social e inovação, pilares que orientam cada serviço prestado e consolidam nossa referência em assistência familiar.</p>
+		</div>
+
+		<h3 class="pilares-title">Nossos Pilares</h3>
+
+		<div class="pilar-card">
+			<h3>Nossa Missão</h3>
+			<p>Oferecer cuidado, respeito e apoio incondicional, garantindo que cada família se sinta amparada em todas as etapas do processo.</p>
+		</div>
+
+		<div class="pilar-card">
+			<h3>Nossa Visão</h3>
+			<p>Ser reconhecida como referência em acolhimento e excelência no setor funerário do Rio Grande do Sul.</p>
+		</div>
+
+		<div class="pilar-card">
+			<h3>Nossos Valores</h3>
+			<ul>
+				<li><strong>Humanização e empatia:</strong> cada contato é conduzido com respeito genuíno e sensibilidade.</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="footer" id="contato">
+		<div class="footer-content">
+			<img loading="lazy" src="images/logo-asas.png" alt="Asas Logo" class="footer-logo" />
+
+			<div class="footer-info">
+				<p><strong>ASAS Familiar</strong></p>
+				<p>Associação de Assistência Social e Amparo Familiar.</p>
+			</div>
+
+			<div class="footer-info">
+				<p>Av. Borges de Medeiros Nº410, Sala 710 / Centro - POA</p>
+			</div>
+
+			<div class="footer-info">
+				<p>Tel: (51) 98020-1159</p>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<p>Copyright © 2026 ASAS Familiar. Todos os direitos reservados. | <a href="termo-de-uso.html" style="color:#003B70; text-decoration:none; font-weight:600;">Termo de Uso</a> | <a href="politica-de-privacidade.html" style="color:#003B70; text-decoration:none; font-weight:600;">Politica de Privacidade</a></p>
+		</div>
+	</section>
+
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/webflow-script.js" type="text/javascript"></script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var navTrigger = document.querySelector('.nav-trigger');
+			var menuWrapper = document.querySelector('.menu-wrapper');
+
+			if (navTrigger && menuWrapper) {
+				navTrigger.addEventListener('click', function (e) {
+					e.preventDefault();
+					navTrigger.classList.toggle('active');
+					menuWrapper.classList.toggle('open');
+				});
+
+				var menuLinks = menuWrapper.querySelectorAll('.menu-link');
+				menuLinks.forEach(function (link) {
+					link.addEventListener('click', function () {
+						navTrigger.classList.remove('active');
+						menuWrapper.classList.remove('open');
+					});
+				});
+
+				document.addEventListener('click', function (e) {
+					if (!navTrigger.contains(e.target) && !menuWrapper.contains(e.target)) {
+						navTrigger.classList.remove('active');
+						menuWrapper.classList.remove('open');
+					}
+				});
+			}
+
+			var dropdownTrigger = document.querySelector('.dropdown-trigger');
+			var dropdownMenu = document.querySelector('.dropdown-menu');
+			var dropdownWrapper = document.querySelector('.dropdown-menu-wrapper');
+
+			if (dropdownTrigger) {
+				dropdownTrigger.addEventListener('click', function (e) {
+					e.preventDefault();
+					dropdownMenu.classList.toggle('show');
+				});
+			}
+
+			document.addEventListener('click', function (e) {
+				if (dropdownWrapper && !dropdownWrapper.contains(e.target)) {
+					dropdownMenu.classList.remove('show');
+				}
+			});
+		});
+	</script>
+
+</body>
+
+</html>
