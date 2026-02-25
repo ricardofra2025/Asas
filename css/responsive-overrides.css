@@ -1,0 +1,245 @@
+/* Overrides responsivos globais para todas as telas */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.container,
+.main-container,
+.w-container {
+  width: min(1200px, calc(100% - 32px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .container,
+  .main-container,
+  .w-container {
+    width: calc(100% - 24px);
+  }
+}
+
+.page-banner {
+  padding: clamp(44px, 8vw, 80px) 16px !important;
+}
+
+.page-banner h1 {
+  font-size: clamp(1.8rem, 5.5vw, 3rem) !important;
+  line-height: 1.2;
+}
+
+.page-banner p {
+  font-size: clamp(0.95rem, 2.6vw, 1.2rem) !important;
+  line-height: 1.6;
+}
+
+.historia-section,
+.sobre-section,
+.diretores-section,
+.parceiros-section,
+.policy-section,
+.terms-section {
+  width: min(1200px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding: clamp(36px, 7vw, 80px) 16px !important;
+}
+
+.historia-content p,
+.sobre-content p,
+.diretor-texto p,
+.policy-section p,
+.terms-section p,
+.policy-section li,
+.terms-section li {
+  text-align: left !important;
+  font-size: clamp(0.95rem, 2.4vw, 1.08rem) !important;
+  line-height: 1.75;
+}
+
+.policy-section ul,
+.terms-section ul {
+  margin-left: 16px !important;
+}
+
+.contact-block {
+  word-break: break-word;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-info {
+  min-width: 220px;
+  flex: 1;
+}
+
+.footer-bottom p {
+  line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    text-align: center !important;
+  }
+
+  .footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.parceiros-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+}
+
+@media (max-width: 900px) {
+  .parceiros-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .parceiro-logo {
+    min-height: 150px !important;
+    padding: 24px !important;
+  }
+
+  .parceiro-info {
+    padding: 22px !important;
+  }
+}
+
+.diretor-card {
+  gap: clamp(20px, 4vw, 50px) !important;
+}
+
+.diretor-foto {
+  flex: 0 0 clamp(220px, 30vw, 300px) !important;
+}
+
+@media (max-width: 968px) {
+  .diretor-card,
+  .diretor-card:nth-child(even) {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .diretor-foto {
+    flex: 0 0 auto !important;
+    max-width: 380px !important;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .diretor-card {
+    margin-bottom: 48px !important;
+  }
+
+  .diretor-nome {
+    font-size: clamp(1.3rem, 5vw, 1.7rem) !important;
+  }
+}
+
+.hero {
+  padding: 0 !important;
+}
+
+.hero-banner-wrapper {
+  height: clamp(220px, 56vw, 720px) !important;
+  min-height: 220px !important;
+  max-height: 720px !important;
+}
+
+.hero-banner-wrapper img {
+  display: block !important;
+}
+
+.hero-mobile-placeholder {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .hero-banner-wrapper {
+    height: clamp(200px, 60vw, 420px) !important;
+    min-height: 200px !important;
+    max-height: 420px !important;
+  }
+}
+
+.servicos-carousel-container {
+  padding: 0 clamp(12px, 4vw, 40px) !important;
+  margin: clamp(30px, 6vw, 60px) auto !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: clamp(36px, 6vw, 56px) !important;
+  height: clamp(36px, 6vw, 56px) !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: clamp(16px, 2.4vw, 20px) !important;
+}
+
+.pilares-section {
+  padding: clamp(44px, 8vw, 80px) 16px !important;
+}
+
+.pilares-container {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .pilares-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .pilares-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pilar-header,
+  .pilar-content {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-wrapper {
+    top: 68px !important;
+  }
+
+  .nav-wrapper {
+    padding: 10px 12px !important;
+  }
+
+  .site-logo {
+    max-height: 44px !important;
+  }
+}
