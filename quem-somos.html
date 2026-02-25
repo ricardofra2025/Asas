@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -177,7 +177,7 @@
 			font-size: 3rem;
 			font-weight: 700;
 			margin: 0 0 20px 0;
-			color: #e74c3c;
+			color: #fff !important;
 		}
 
 		.page-banner p {
@@ -211,6 +211,7 @@
 			margin-bottom: 30px;
 			text-transform: uppercase;
 			letter-spacing: 1px;
+			text-align: center;
 		}
 
 		.sobre-content p {
@@ -218,7 +219,12 @@
 			line-height: 1.8;
 			color: #444;
 			margin-bottom: 25px;
-			text-align: justify;
+			text-align: left;
+		}
+
+		.sobre-content {
+			max-width: 860px;
+			margin: 0 auto;
 		}
 
 		.pilares-title {
@@ -431,12 +437,25 @@
 				font-size: 2rem;
 			}
 
+			.page-banner p {
+				font-size: 1rem;
+			}
+
+			.sobre-section {
+				padding: 56px 16px;
+			}
+
 			.sobre-logo {
-				max-width: 220px;
+				max-width: 130px;
+			}
+
+			.sobre-title {
+				font-size: 1.5rem;
 			}
 
 			.sobre-content p {
 				font-size: 1rem;
+				line-height: 1.7;
 			}
 
 			.menu-link {
@@ -463,6 +482,18 @@
 		}
 
 		@media (max-width: 480px) {
+			.page-banner {
+				padding: 56px 14px;
+			}
+
+			.page-banner h1 {
+				font-size: 1.8rem;
+			}
+
+			.page-banner p {
+				font-size: 0.95rem;
+			}
+
 			.menu-link {
 				font-size: 16px !important;
 				padding: 14px 15px !important;
@@ -516,16 +547,16 @@
 								<a href="index.html" class="menu-link" style="color: #003B70;">Home</a>
 
 								<div class="dropdown-menu-wrapper" style="position: relative;">
-									<a href="#" class="menu-link dropdown-trigger" style="color: #003B70;">Quem Somos â–¾</a>
+									<a href="#" class="menu-link dropdown-trigger" style="color: #003B70;">Quem Somos ▾</a>
 									<div class="dropdown-menu">
-										<a href="quem-somos.html" class="dropdown-link">Sobre nÃ³s</a>
-										<a href="historia.html" class="dropdown-link">Nossa histÃ³ria</a>
+										<a href="quem-somos.html" class="dropdown-link">Sobre nós</a>
+										<a href="historia.html" class="dropdown-link">Nossa história</a>
 										<a href="diretoria.html" class="dropdown-link">Diretoria</a>
 										<a href="parceiros.html" class="dropdown-link">Parceiros</a>
 									</div>
 								</div>
 
-								<a href="servicos.html" class="menu-link" style="color: #003B70;">Nossos ServiÃ§os</a>
+								<a href="servicos.html" class="menu-link" style="color: #003B70;">Nossos Serviços</a>
 								<a href="index.html#contato" class="menu-link" style="color: #003B70;">Contato</a>
 							</div>
 						</div>
@@ -551,41 +582,23 @@
 
 	<section class="page-banner">
 		<h1>Quem Somos</h1>
-		<p>"Transformamos cuidado em legado, com excelÃªncia em assistÃªncia familiar e acolhimento humanizado no Sul do Brasil."</p>
+		<p>"Transformamos cuidado em legado, com excelência em assistência familiar e acolhimento humanizado no Sul do Brasil."</p>
 	</section>
 
 	<section class="sobre-section">
 		<div class="sobre-logo-wrapper">
-			<img src="images/logo-asas-colorida.png" alt="ASAS Familiar Logo" class="sobre-logo" />
+			<img src="images/favicon.png" alt="ASAS Familiar" class="sobre-logo" />
 		</div>
 
-		<h2 class="sobre-title">Sobre NÃ³s</h2>
+		<h2 class="sobre-title">Sobre Nós</h2>
 
 		<div class="sobre-content">
-			<p>Fundada em 2025, em Porto Alegre-RS, a <strong>ASAS FAMILIAR</strong> Ã© uma associaÃ§Ã£o sem fins lucrativos, dedicada Ã  assistÃªncia social, familiar e funerÃ¡ria.</p>
-			<p>Com sede na Av. Borges de Medeiros, nÂº 410, 7Âº andar, Centro HistÃ³rico de Porto Alegre-RS, nossa instituiÃ§Ã£o nasceu com o propÃ³sito de oferecer acolhimento humanizado, orientaÃ§Ã£o jurÃ­dica e suporte emocional Ã s famÃ­lias em momentos de despedida.</p>
-			<p>Nossa atuaÃ§Ã£o integra serviÃ§os funerÃ¡rios, suporte emocional, orientaÃ§Ã£o jurÃ­dica e benefÃ­cios em saÃºde, com atendimento em toda a regiÃ£o do Rio Grande do Sul.</p>
-			<p>Valorizamos transparÃªncia, humanizaÃ§Ã£o, empatia, responsabilidade social e inovaÃ§Ã£o, pilares que orientam cada serviÃ§o prestado e consolidam nossa referÃªncia em assistÃªncia familiar.</p>
+			<p>Fundada em 2025, em Porto Alegre-RS, a <strong>ASAS FAMILIAR</strong> é uma associação sem fins lucrativos, dedicada à assistência social, familiar e funerária.</p>
+			<p>Com sede na Av. Borges de Medeiros, nº 410, 7º andar, Centro Histórico de Porto Alegre-RS, nossa instituição nasceu com o propósito de oferecer acolhimento humanizado, orientação jurídica e suporte emocional às famílias em momentos de despedida.</p>
+			<p>Nossa atuação integra serviços funerários, suporte emocional, orientação jurídica e benefícios em saúde, com atendimento em toda a região do Rio Grande do Sul.</p>
+			<p>Valorizamos transparência, humanização, empatia, responsabilidade social e inovação, pilares que orientam cada serviço prestado e consolidam nossa referência em assistência familiar.</p>
 		</div>
 
-		<h3 class="pilares-title">Nossos Pilares</h3>
-
-		<div class="pilar-card">
-			<h3>Nossa MissÃ£o</h3>
-			<p>Oferecer cuidado, respeito e apoio incondicional, garantindo que cada famÃ­lia se sinta amparada em todas as etapas do processo.</p>
-		</div>
-
-		<div class="pilar-card">
-			<h3>Nossa VisÃ£o</h3>
-			<p>Ser reconhecida como referÃªncia em acolhimento e excelÃªncia no setor funerÃ¡rio do Rio Grande do Sul.</p>
-		</div>
-
-		<div class="pilar-card">
-			<h3>Nossos Valores</h3>
-			<ul>
-				<li><strong>HumanizaÃ§Ã£o e empatia:</strong> cada contato Ã© conduzido com respeito genuÃ­no e sensibilidade.</li>
-			</ul>
-		</div>
 	</section>
 
 	<section class="footer" id="contato">
@@ -594,11 +607,11 @@
 
 			<div class="footer-info">
 				<p><strong>ASAS Familiar</strong></p>
-				<p>AssociaÃ§Ã£o de AssistÃªncia Social e Amparo Familiar.</p>
+				<p>Associação de Assistência Social e Amparo Familiar.</p>
 			</div>
 
 			<div class="footer-info">
-				<p>Av. Borges de Medeiros NÂº410, Sala 710 / Centro - POA</p>
+				<p>Av. Borges de Medeiros Nº410, Sala 710 / Centro - POA</p>
 			</div>
 
 			<div class="footer-info">
@@ -607,7 +620,7 @@
 		</div>
 
 		<div class="footer-bottom">
-			<p>Copyright Â© 2026 ASAS Familiar. Todos os direitos reservados. | <a href="termo-de-uso.html" style="color:#003B70; text-decoration:none; font-weight:600;">Termo de Uso</a> | <a href="politica-de-privacidade.html" style="color:#003B70; text-decoration:none; font-weight:600;">Politica de Privacidade</a></p>
+			<p>Copyright © 2026 ASAS Familiar. Todos os direitos reservados. | <a href="termo-de-uso.html" style="color:#003B70; text-decoration:none; font-weight:600;">Termo de Uso</a> | <a href="politica-de-privacidade.html" style="color:#003B70; text-decoration:none; font-weight:600;">Politica de Privacidade</a></p>
 		</div>
 	</section>
 

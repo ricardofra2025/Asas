@@ -1,5 +1,9 @@
 /* Overrides responsivos globais para todas as telas */
 
+:root {
+  --theme--color-01: #003b70;
+}
+
 html,
 body {
   max-width: 100%;
@@ -241,5 +245,99 @@ iframe {
 
   .site-logo {
     max-height: 44px !important;
+  }
+}
+
+/* Home - seção Sobre */
+#sobre.why-choose {
+  background-color: #efefef;
+  padding: clamp(44px, 7vw, 88px) 0 !important;
+}
+
+#sobre .why-choose-content-wrapper {
+  display: grid !important;
+  grid-template-columns: minmax(320px, 1fr) minmax(360px, 585px);
+  gap: clamp(24px, 4vw, 64px) !important;
+  align-items: center;
+  padding-left: clamp(8px, 2vw, 24px) !important;
+  padding-right: clamp(8px, 2vw, 24px) !important;
+}
+
+#sobre .why-choose-left {
+  max-width: 620px;
+  gap: 28px !important;
+}
+
+#sobre .title {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#sobre .heading-h2 {
+  margin: 0;
+  font-size: clamp(2.1rem, 4.2vw, 3.6rem);
+  line-height: 1.1;
+}
+
+#sobre .subtitle {
+  margin: 0;
+  opacity: 1;
+  color: #666563;
+  max-width: 540px;
+  font-size: clamp(1rem, 1.45vw, 1.95rem);
+  line-height: 1.45;
+}
+
+#sobre .service-details-content {
+  max-width: 640px;
+}
+
+#sobre .service-details-content p {
+  margin: 0 0 8px;
+  color: #1f1f1f;
+  line-height: 1.55;
+}
+
+#sobre .secondary-button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  background-color: #003b70 !important;
+  color: #fff !important;
+  border-radius: 999px;
+  padding: 12px 24px !important;
+}
+
+#sobre .secondary-button p {
+  margin: 0;
+  color: inherit;
+}
+
+#sobre .secondary-button:hover {
+  background-color: #e74c3c !important;
+}
+
+#sobre .why-choose-image {
+  display: block;
+  width: 100%;
+  max-width: 585px;
+  aspect-ratio: 585 / 425;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+@media (max-width: 900px) {
+  #sobre .why-choose-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 28px !important;
+  }
+
+  #sobre .why-choose-image {
+    max-width: 100%;
+  }
+
+  #sobre .why-choose-left {
+    max-width: 100%;
   }
 }
