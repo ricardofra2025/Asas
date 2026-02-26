@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Nossa História - Asas Assistência Familiar</title>
+  <title>Apoio Familiar - ASAS Familiar</title>
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link href="css/site-shared.css?v=20260226" rel="stylesheet" type="text/css" />
   <link href="css/variables.css?v=20260226" rel="stylesheet" type="text/css" />
@@ -15,17 +15,8 @@
   <link href="images/favicon.png?v=1" rel="apple-touch-icon" sizes="180x180" />
   <link href="images/favicon.png?v=1" rel="shortcut icon" type="image/png" />
 
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link href="https://fonts.gstatic.com" rel="preconnect" />
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-  <script
-    type="text/javascript">WebFont.load({ google: { families: ["IBM Plex Sans:100,200,300,regular,500,600,700", "IBM Plex Serif:100,200,300,regular,500,600,700"] } });</script>
   <style>
-    /* RESET BÁSICO */
-    body {
-      margin: 0;
-      padding: 0;
-    }
+    body { margin: 0; padding: 0; }
 
     .header .menu-link:hover,
     .header .menu-link:active,
@@ -33,20 +24,25 @@
     .header .dropdown-trigger:hover,
     .header .dropdown-trigger:active,
     .header .dropdown-trigger:focus,
-    .header .dropdown-menu-wrapper>a:hover,
-    .header .dropdown-menu-wrapper>a:active,
-    .header .dropdown-menu-wrapper>a:focus,
+    .header .dropdown-menu-wrapper > a:hover,
+    .header .dropdown-menu-wrapper > a:active,
+    .header .dropdown-menu-wrapper > a:focus,
     .header .nav-logo:hover,
     .header .nav-logo:active,
     .header .nav-logo:focus,
     .header .w-nav-brand:hover,
     .header .w-nav-brand:active,
-    .header .w-nav-brand:focus {
+    .header .w-nav-brand:focus,
+    .footer a:hover,
+    .footer a:active,
+    .footer a:focus,
+    .footer a:focus-visible {
       background: transparent !important;
       background-color: transparent !important;
+      outline: none !important;
+      box-shadow: none !important;
     }
 
-    /* BANNER NOSSA HISTÓRIA */
     .page-banner {
       background: linear-gradient(135deg, #003B70 0%, #004b85 100%);
       padding: 80px 20px;
@@ -56,118 +52,68 @@
 
     .page-banner h1 {
       font-size: 3rem;
-      font-weight: 700;
       margin: 0 0 20px 0;
-      color: #fff !important;
+      color: #fff;
     }
 
     .page-banner p {
-      font-size: 1.2rem;
-      max-width: 800px;
+      font-size: 1.15rem;
+      max-width: 900px;
       margin: 0 auto;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    /* SEÇÃO CONTEÚDO */
-    .historia-section {
+    .servico-section {
       padding: 80px 20px;
       max-width: 1000px;
       margin: 0 auto;
     }
 
-    .historia-logo-wrapper {
-      text-align: center;
-      margin-bottom: 28px;
-    }
+    .servico-logo-wrapper { text-align: center; margin-bottom: 24px; }
+    .servico-logo { max-width: 96px; width: 100%; height: auto; }
 
-    .historia-logo {
-      max-width: 96px;
-      width: 100%;
-      height: auto;
-    }
-
-    .historia-title {
+    .servico-title {
       color: #003B70;
       font-size: 1.8rem;
       font-weight: 700;
-      margin-bottom: 26px;
-      margin-top: 0;
+      margin: 0 0 24px 0;
       text-transform: uppercase;
       letter-spacing: 1px;
       text-align: center;
     }
 
-    .historia-content p {
-      font-size: 1.1rem;
+    .servico-content p {
+      font-size: 1.08rem;
       line-height: 1.8;
       color: #444;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       text-align: justify;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
-      .page-banner h1 {
-        font-size: 2rem;
-      }
-
-      .page-banner p {
-        padding: 0 8px;
-      }
-
-      .historia-logo {
-        max-width: 80px;
-      }
-
-      .historia-title {
-        font-size: 1.5rem;
-      }
-
-      .historia-section {
-        padding: 56px 16px;
-      }
-
-      .historia-content p {
-        font-size: 1rem;
-      }
+      .page-banner { padding: 56px 16px; }
+      .page-banner h1 { font-size: 2rem; }
+      .page-banner p { font-size: 1rem; }
+      .servico-section { padding: 56px 16px; }
+      .servico-title { font-size: 1.45rem; }
+      .servico-content p { font-size: 1rem; text-align: left; }
     }
-
-    @media (max-width: 480px) {
-      .page-banner {
-        padding: 56px 16px;
-      }
-
-      .historia-logo-wrapper {
-        margin-bottom: 20px;
-      }
-
-      .historia-title {
-        font-size: 1.35rem;
-        letter-spacing: 0.6px;
-      }
-    }
-
   </style>
 </head>
 
 <body>
-
   <div data-animation="default" class="header w-nav" role="banner">
     <div class="container">
       <div class="main-container w-container">
         <div class="nav-wrapper">
-
           <a href="index.html" class="nav-logo w-nav-brand">
             <img loading="lazy" src="images/logo-asas.png" alt="Asas Familiar" class="site-logo" />
           </a>
 
-          <nav role="navigation" class="menu-wrapper w-nav-menu"
-            style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
-
+          <nav role="navigation" class="menu-wrapper w-nav-menu" style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
             <div class="menu-item-wrapper">
               <div class="menu-items">
                 <a href="index.html" class="menu-link" style="color: #003B70;">Home</a>
-
                 <div class="dropdown-menu-wrapper" style="position: relative;">
                   <a href="#" class="menu-link dropdown-trigger" style="color: #003B70;">Quem Somos ▾</a>
                   <div class="dropdown-menu">
@@ -177,57 +123,38 @@
                     <a href="parceiros.html" class="dropdown-link">Parceiros</a>
                   </div>
                 </div>
-
                 <a href="servicos.html" class="menu-link" style="color: #003B70;">Nossos Serviços</a>
                 <a href="contato.html" class="menu-link" style="color: #003B70;">Contato</a>
               </div>
             </div>
-
             <div class="nav-button-wrapper">
-              <a href="https://wa.me/5551980201159" target="_blank" class="primary-button w-inline-block">
-                Falar com Atendente
-              </a>
+              <a href="https://wa.me/5551980201159" target="_blank" rel="noopener noreferrer" class="primary-button w-inline-block">Falar com Atendente</a>
             </div>
-
           </nav>
 
-          <div class="nav-trigger w-nav-button">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
+          <div class="nav-trigger w-nav-button"><span></span><span></span><span></span></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- BANNER NOSSA HISTÓRIA -->
   <section class="page-banner">
-    <h1>Nossa História</h1>
-    <p>"Nossa história nasceu do propósito de transformar despedidas em<br>acolhimento, respeito e dignidade."</p>
+    <h1>Apoio Familiar</h1>
+    <p>Suporte contínuo para a família em cada etapa, com acolhimento humanizado e orientação prática.</p>
   </section>
 
-  <!-- CONTEÚDO HISTÓRIA -->
-  <section class="historia-section">
-    <div class="historia-logo-wrapper">
-      <img src="images/favicon.png" alt="ASAS Familiar" class="historia-logo" />
+  <section class="servico-section">
+    <div class="servico-logo-wrapper">
+      <img src="images/favicon.png" alt="ASAS Familiar" class="servico-logo" />
     </div>
-
-    <h2 class="historia-title">Nossa História</h2>
-
-    <div class="historia-content">
-      <p>A <strong>ASAS FAMILIAR</strong> nasceu do propósito de transformar um dos momentos mais delicados da vida em uma experiência de acolhimento, respeito e dignidade. Em um setor marcado pela burocracia, frieza e impessoalidade, decidimos trilhar um caminho diferente: uma assistência funerária, orientação jurídica e suporte emocional em um único serviço integral, colocando a família no centro do cuidado.</p>
-
-      <p>Com raízes sólidas em Porto Alegre e na região metropolitana, construímos nossa trajetória amparando famílias, oferecendo muito mais que soluções práticas. Proporcionamos cuidado humanizado, memória preservada e serenidade, com atenção aos mínimos detalhes que tornam cada despedida única e significativa.</p>
-
-      <p>Cada vida é singular, e cada cerimônia deve refletir a história, os valores e o legado de quem partiu. Por isso, nossa equipe atua com sensibilidade, empatia e profissionalismo, assumindo toda a responsabilidade para que a família possa viver o luto com tranquilidade, sem preocupações burocráticas ou administrativas.</p>
-
-      <p>Ao longo dos anos, nos consolidamos como um porto seguro em momentos de dor, transformando a experiência do luto em um processo de acolhimento, honra e memória e celebração da vida. Nosso compromisso é oferecer apoio integral, garantindo que cada despedida seja realizada com dignidade, amor e respeito, elevando o padrão de excelência no setor funerário e de assistência familiar.</p>
+    <h2 class="servico-title">Apoio Familiar</h2>
+    <div class="servico-content">
+      <p>Nosso serviço de <strong>Apoio Familiar</strong> oferece acompanhamento próximo para reduzir a sobrecarga emocional e operacional em momentos delicados. Atuamos com escuta ativa, organização e presença constante para que a família se sinta amparada.</p>
+      <p>Auxiliamos na comunicação entre familiares, no direcionamento das decisões mais urgentes e no cuidado com cada detalhe do processo. O objetivo é trazer segurança para que todos possam atravessar esse período com mais serenidade.</p>
+      <p>Também orientamos sobre próximos passos após a despedida, criando uma rede de suporte que respeita o tempo e a história de cada família. Todo atendimento é feito com empatia, transparência e responsabilidade.</p>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <section class="footer" id="contato">
     <div class="footer-content footer-flex">
       <img loading="lazy" src="images/logo-asas.png" alt="Logotipo da ASAS Familiar, representando assistência social e amparo familiar" class="footer-logo" />
@@ -239,7 +166,6 @@
         E-mail: contato@asasfamiliar.com.br</p>
       </div>
     </div>
-
     <div class="footer-bottom footer-bottom-small">
       <p>© 2026 ASAS Familiar. Todos os direitos reservados. <a href="termo-de-uso.html">Termo de Uso</a> | <a href="politica-de-privacidade.html">Política de Privacidade</a></p>
     </div>
@@ -248,10 +174,8 @@
   <script src="js/jquery.js" type="text/javascript"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Menu Mobile Toggle
       var navTrigger = document.querySelector('.nav-trigger');
       var menuWrapper = document.querySelector('.menu-wrapper');
-
       if (navTrigger && menuWrapper) {
         navTrigger.addEventListener('click', function (e) {
           e.preventDefault();
@@ -259,8 +183,7 @@
           menuWrapper.classList.toggle('open');
         });
 
-        // Fechar menu ao clicar em um link
-        var menuLinks = menuWrapper.querySelectorAll('.menu-link');
+        var menuLinks = menuWrapper.querySelectorAll('.menu-link, .dropdown-link');
         menuLinks.forEach(function (link) {
           link.addEventListener('click', function () {
             navTrigger.classList.remove('active');
@@ -268,7 +191,6 @@
           });
         });
 
-        // Fechar menu ao clicar fora
         document.addEventListener('click', function (e) {
           if (!navTrigger.contains(e.target) && !menuWrapper.contains(e.target)) {
             navTrigger.classList.remove('active');
@@ -277,7 +199,6 @@
         });
       }
 
-      // Dropdown menu em mobile
       var dropdownTrigger = document.querySelector('.dropdown-trigger');
       var dropdownMenu = document.querySelector('.dropdown-menu');
       var dropdownWrapper = document.querySelector('.dropdown-menu-wrapper');
@@ -296,8 +217,6 @@
       });
     });
   </script>
-
 </body>
 
 </html>
-
