@@ -4,7 +4,7 @@
 		{
 			"label": "Minificar CSS e JS",
 			"type": "shell",
-			"command": "npx minify css/variables.css -o css/variables.min.css && npx minify css/mindoor.webflow.shared.f865d2c40.css -o css/mindoor.webflow.shared.min.css && npx minify js/webflow-script.js -o js/webflow-script.min.js && npx minify js/jquery.js -o js/jquery.min.js",
+			"command": "npx --yes clean-css-cli -O2 -o css/variables.min.css css/variables.css; npx --yes clean-css-cli -O2 -o css/padrao-historia.min.css css/padrao-historia.css; npx --yes clean-css-cli -O2 -o css/responsive-overrides.min.css css/responsive-overrides.css; npx --yes clean-css-cli -O2 -o css/site-shared.min.css css/site-shared.css; npx --yes clean-css-cli -O2 -o css/typography.min.css css/typography.css; npx --yes clean-css-cli -O2 -o dist/css/variables.min.css css/variables.css; npx --yes clean-css-cli -O2 -o dist/css/padrao-historia.min.css css/padrao-historia.css; npx --yes clean-css-cli -O2 -o dist/css/responsive-overrides.min.css css/responsive-overrides.css; npx --yes clean-css-cli -O2 -o dist/css/site-shared.min.css css/site-shared.css; npx --yes clean-css-cli -O2 -o dist/css/typography.min.css css/typography.css",
 			"args": [],
 			"isBackground": false,
 			"problemMatcher": [],

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -213,68 +213,48 @@
       transform: scale(1.05);
     }
 
-    /* FOOTER */
-    .footer {
-      background-color: #f5f5f5;
-      padding: 30px 20px 20px;
-    }
 
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .footer-logo {
-      height: 80px;
-      width: auto;
-    }
-
-    .footer-info {
-      flex: 1;
-      min-width: 250px;
-    }
-
-    .footer-info p {
-      color: #003B70;
-      margin: 8px 0;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .footer-info strong {
-      font-weight: 700;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      padding-top: 15px;
-      border-top: 1px solid #d0d0d0;
-      margin-top: 15px;
-    }
-
-    .footer-bottom p {
-      color: #003B70;
-      font-size: 0.85rem;
-      margin: 0;
-    }
 
     @media (max-width: 768px) {
       .parceiros-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
       }
 
       .page-banner h1 {
         font-size: 2rem;
       }
 
-      .footer-content {
-        flex-direction: column;
-        text-align: center;
+      .site-logo {
+        max-height: 44px;
+      }
+
+      .parceiro-logo {
+        padding: 20px 12px;
+        min-height: 120px;
+      }
+
+      .parceiro-logo img {
+        max-height: 80px;
+      }
+
+      .parceiro-info {
+        padding: 14px;
+      }
+
+      .parceiro-info h3 {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+      }
+
+      .parceiro-info p {
+        font-size: 0.78rem;
+        line-height: 1.55;
+        margin-bottom: 10px;
+      }
+
+      .parceiro-link {
+        font-size: 0.8rem;
       }
     }
 
@@ -509,7 +489,7 @@
         });
 
         // Fechar menu ao clicar em um link
-        const menuLinks = menuWrapper.querySelectorAll('.menu-link');
+        const menuLinks = menuWrapper.querySelectorAll('.menu-link:not(.dropdown-trigger), .dropdown-link');
         menuLinks.forEach(function (link) {
           link.addEventListener('click', function () {
             navTrigger.classList.remove('active');

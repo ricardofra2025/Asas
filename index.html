@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
   <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>ASAS Familiar - Assistência Social e Amparo Familiar</title>
   <meta name="description" content="A ASAS Familiar oferece assistência social e amparo familiar em Porto Alegre e região. Conheça nossos serviços, história e missão." />
   <meta name="keywords" content="assistência social, amparo familiar, Porto Alegre, ASAS Familiar, serviços sociais, luto, apoio familiar" />
@@ -16,7 +17,7 @@
   <link href="css/variables.css?v=20260226" rel="stylesheet" type="text/css" />
   <link href="css/typography.css?v=20260226" rel="stylesheet" type="text/css" />
   <link href="css/padrao-historia.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/responsive-overrides.css?v=20260226" rel="stylesheet" type="text/css" />
+  <link href="css/responsive-overrides.css?v=20260313" rel="stylesheet" type="text/css" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -92,56 +93,6 @@
       border-radius: 4px;
     }
 
-    /* DROPDOWN MENU */
-    .dropdown-menu-wrapper {
-      position: relative;
-    }
-
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #fff;
-      box-shadow: 0 4px 16px rgba(0, 59, 112, 0.08);
-      border-radius: 8px;
-      min-width: 180px;
-      z-index: 100;
-      padding: 12px 0;
-      border: 1px solid #e5e5e5;
-    }
-
-    .dropdown-menu.show {
-      display: block;
-      animation: fadeInDropdown 0.2s;
-    }
-
-    @keyframes fadeInDropdown {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .dropdown-link {
-      display: block;
-      padding: 10px 24px;
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 500;
-      transition: background 0.2s;
-    }
-
-    .dropdown-link:hover {
-      background: #f5f5f5;
-      color: var(--accent-color);
-    }
-
     /* SEÇÃO HERO */
     .hero {
       display: block;
@@ -166,32 +117,83 @@
     }
 
     /* BANNER MOBILE */
-    .hero-mobile-placeholder {
+    .hero-mobile-banner {
       display: none;
-      width: 100%;
-      height: 300px;
-      background-color: #f0f0f0;
-      border: 2px dashed #999;
-      border-radius: 8px;
-      margin: 0 auto;
       position: relative;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #666;
-      font-size: 1.1rem;
-      font-weight: 500;
+      width: 100%;
+      min-height: 300px;
+      overflow: hidden;
+      border-radius: 24px;
+      background: linear-gradient(180deg, #0d2236 0%, #063e71 100%);
+      text-decoration: none;
+      box-shadow: 0 18px 48px rgba(6, 62, 113, 0.18);
     }
 
-    .hero-mobile-placeholder::before {
-      content: "Espaço reservado para banner mobile\AClique aqui para editar";
-      white-space: pre-wrap;
-      display: block;
+    .hero-mobile-image {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      filter: brightness(0.62);
+    }
+
+    .hero-mobile-content {
+      position: relative;
+      z-index: 1;
+      min-height: 300px;
+      padding: 22px 18px;
       display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 10px;
+      color: #fff;
+      background: linear-gradient(180deg, rgba(6, 62, 113, 0.03) 0%, rgba(6, 62, 113, 0.82) 70%, rgba(6, 62, 113, 0.94) 100%);
+    }
+
+    .hero-mobile-kicker {
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .hero-mobile-title {
+      margin: 0;
+      max-width: 280px;
+      color: #fff;
+      font-size: 1.85rem;
+      line-height: 1.08;
+    }
+
+    .hero-mobile-copy {
+      margin: 0;
+      max-width: 290px;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    .hero-mobile-cta {
+      display: inline-flex;
+      align-self: flex-start;
       align-items: center;
       justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      margin-top: 6px;
+      border-radius: 999px;
+      background: #e74c3c;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 700;
     }
 
     .servicos-carousel-container {
@@ -204,11 +206,7 @@
 
     .swiper {
       width: 100%;
-      padding-bottom: 50px;
-    }
-
-    .swiper-wrapper {
-      gap: 30px;
+      padding-bottom: 40px;
     }
 
     .swiper-slide {
@@ -222,8 +220,6 @@
       padding: 48px 32px 36px 32px;
       min-height: 360px;
       text-align: center;
-      min-width: 280px;
-      max-width: 300px;
       transition: box-shadow 0.25s, transform 0.18s;
     }
 
@@ -332,30 +328,34 @@
         max-width: 1200px;
       }
 
-      .swiper-slide {
-        min-width: 260px;
-        max-width: 280px;
-      }
     }
 
     @media (max-width: 768px) {
       .hero {
-        padding: 20px;
+        padding: 12px;
+        background: #f6f7f9;
       }
 
       .hero-banner-wrapper {
-        height: auto;
-        min-height: auto;
-        max-height: none;
-      }
-
-      .hero-banner-wrapper img {
         display: none;
       }
 
-      .hero-mobile-placeholder {
-        display: flex;
-        height: 300px;
+      .hero-mobile-banner {
+        display: block;
+        min-height: clamp(300px, 92vw, 420px);
+      }
+
+      .hero-mobile-content {
+        min-height: clamp(300px, 92vw, 420px);
+        padding: 20px 16px;
+      }
+
+      .hero-mobile-title {
+        font-size: clamp(1.75rem, 7.5vw, 2.3rem);
+      }
+
+      .hero-mobile-copy {
+        font-size: 0.95rem;
       }
 
       .servicos-carousel-container {
@@ -363,40 +363,83 @@
         max-width: 100%;
       }
 
-      .swiper-wrapper {
-        gap: 20px;
+      .swiper-slide {
+        padding: 28px 18px 22px;
+        min-height: 280px;
       }
 
-      .swiper-slide {
-        min-width: 240px;
-        max-width: 260px;
-        padding: 36px 24px 28px 24px;
-        min-height: 320px;
+      .servico-icone {
+        height: 40px;
+        margin-bottom: 14px;
       }
 
       .servico-titulo {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
       }
 
       .servico-desc {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
+        line-height: 1.45;
+        margin-bottom: 14px;
+      }
+
+      .servico-link {
+        font-size: 0.9rem;
       }
     }
 
     @media (max-width: 480px) {
+      .hero {
+        padding: 10px;
+      }
+
+      .hero-mobile-banner,
+      .hero-mobile-content {
+        min-height: 340px;
+      }
+
+      .hero-mobile-title {
+        max-width: 240px;
+      }
+
+      .hero-mobile-copy {
+        max-width: 250px;
+        font-size: 0.92rem;
+      }
+
+      .hero-mobile-cta {
+        width: 100%;
+        align-self: stretch;
+      }
+
       .servicos-carousel-container {
         padding: 0 15px;
       }
 
-      .swiper-wrapper {
-        gap: 15px;
+      .swiper-slide {
+        padding: 22px 14px 18px;
+        min-height: 252px;
       }
 
-      .swiper-slide {
-        min-width: 220px;
-        max-width: 240px;
-        padding: 28px 20px 22px 20px;
-        min-height: 300px;
+      .servico-icone {
+        height: 34px;
+        margin-bottom: 12px;
+      }
+
+      .servico-titulo {
+        font-size: 1rem;
+        margin-bottom: 6px;
+      }
+
+      .servico-desc {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin-bottom: 12px;
+      }
+
+      .servico-link {
+        font-size: 0.82rem;
       }
 
       .swiper-button-next,
@@ -411,10 +454,35 @@
       }
     }
 
+    @media (max-width: 390px) {
+      .hero-mobile-content {
+        padding: 18px 14px;
+      }
+
+      .hero-mobile-banner,
+      .hero-mobile-content {
+        min-height: 320px;
+      }
+
+      .hero-mobile-title {
+        font-size: 1.55rem;
+        max-width: 210px;
+      }
+
+      .hero-mobile-copy {
+        max-width: 220px;
+        font-size: 0.88rem;
+      }
+
+      .hero-mobile-kicker {
+        font-size: 0.72rem;
+      }
+    }
+
     /* SEÇÃO NOSSOS PILARES */
     .pilares-section {
       background-color: #f9f9f9;
-      padding: 80px 40px;
+      padding: 40px 40px 80px;
       text-align: center;
     }
 
@@ -544,12 +612,59 @@
 
     @media (max-width: 768px) {
       .pilares-section {
-        padding: 60px 20px;
+        padding: 48px 0 56px;
+      }
+
+      .pilares-header {
+        padding: 0 20px;
+        margin-bottom: 32px;
+      }
+
+      .pilares-icon {
+        max-width: 52px;
+        margin-bottom: 12px;
+      }
+
+      .pilares-title h2 {
+        font-size: 1.6rem;
+        margin: 0 0 8px;
+      }
+
+      .pilares-subtitle {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: #888;
+      }
+      .pilares-carousel-wrapper {
+        position: relative;
       }
 
       .pilares-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        display: flex !important;
+        flex-direction: row !important;
+        grid-template-columns: none !important;
+        gap: 0 !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 10px 20px 16px;
+        scroll-padding-left: 20px;
+      }
+
+      .pilares-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .pilar-card {
+        flex: 0 0 calc(100vw - 60px);
+        max-width: 320px;
+        scroll-snap-align: start;
+        margin-right: 16px;
+      }
+
+      .pilar-card:last-child {
+        margin-right: 0;
       }
 
       .pilares-title h2 {
@@ -557,59 +672,55 @@
       }
 
       .pilar-header {
-        padding: 30px 20px;
-        min-height: 80px;
+        padding: 24px 20px;
+        min-height: 70px;
       }
 
       .pilar-header h3 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
 
       .pilar-content {
-        padding: 25px;
+        padding: 20px;
+      }
+
+      .pilar-text {
+        font-size: 0.875rem;
+        line-height: 1.65;
+      }
+
+      /* DOTS */
+      .pilares-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .pilares-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #ccc;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        transition: background 0.2s;
+      }
+
+      .pilares-dot.active {
+        background: #003B70;
+        width: 22px;
+        border-radius: 4px;
       }
     }
 
-    .footer#contato {
-      padding: 20px 16px 10px;
+    /* Ocultar dots no desktop */
+    .pilares-dots {
+      display: none;
     }
 
-    .footer#contato .footer-content {
-      gap: 12px;
-      align-items: flex-start;
-    }
 
-    .footer#contato .footer-logo {
-      max-width: 72px;
-      margin-bottom: 0;
-    }
-
-    .footer#contato .footer-text p {
-      margin: 0;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    .footer#contato .footer-bottom {
-      margin-top: 10px;
-      padding-top: 8px;
-    }
-
-    .footer#contato .footer-bottom p {
-      margin: 0;
-      font-size: 12px;
-      line-height: 1.4;
-    }
-
-    @media (max-width: 768px) {
-      .footer#contato .footer-content {
-        align-items: center;
-      }
-
-      .footer#contato .footer-text p {
-        text-align: center;
-      }
-    }
   </style>
 </head>
 
@@ -681,8 +792,20 @@
 
     </div>
 
-    <!-- Espaço Reservado para Banner Mobile -->
-    <div class="hero-mobile-placeholder"></div>
+    <a href="https://wa.me/5551980201159" target="_blank" rel="noopener noreferrer" class="hero-mobile-banner" aria-label="Falar com a ASAS Familiar pelo WhatsApp">
+      <img
+        src="images/12.png"
+        alt="Família acolhida pela ASAS Familiar"
+        class="hero-mobile-image"
+        loading="eager"
+      />
+      <div class="hero-mobile-content">
+        <span class="hero-mobile-kicker">ASAS Familiar</span>
+        <h1 class="hero-mobile-title">Acolhimento e apoio para sua família</h1>
+        <p class="hero-mobile-copy">Atendimento humanizado, orientação clara e suporte completo quando você mais precisa.</p>
+        <span class="hero-mobile-cta">Falar com Atendente</span>
+      </div>
+    </a>
   </section>
 
   <section class="service-strip">
@@ -763,32 +886,40 @@
       <p class="pilares-subtitle">"Missão, Visão e Valores sustentam nossa essência,<br>guiando cada família com cuidado humanizado, acolhimento e profundo respeito."</p>
     </div>
 
-    <div class="pilares-container">
-      <div class="pilar-card">
-        <div class="pilar-header">
-          <h3>MISSÃO</h3>
+    <div class="pilares-carousel-wrapper">
+      <div class="pilares-container">
+        <div class="pilar-card">
+          <div class="pilar-header">
+            <h3>MISSÃO</h3>
+          </div>
+          <div class="pilar-content">
+            <p class="pilar-text">Oferecer cuidado humanizado e completo nos momentos de despedida, unindo acolhimento, apoio emocional e orientação especializada para transformar a dor da perda em um caminho de serenidade, dignidade e respeito às famílias.</p>
+          </div>
         </div>
-        <div class="pilar-content">
-          <p class="pilar-text">Oferecer cuidado humanizado e completo nos momentos de despedida, unindo acolhimento, apoio emocional e orientação especializada<br>para transformar a dor da perda em um caminho de serenidade, dignidade e respeito às famílias.</p>
+
+        <div class="pilar-card">
+          <div class="pilar-header">
+            <h3>VISÃO</h3>
+          </div>
+          <div class="pilar-content">
+            <p class="pilar-text">Transformar a forma como Porto Alegre e o Rio Grande do Sul vivenciam o luto, promovendo uma cultura de acolhimento humanizado, inovação nos serviços e apoio integral, tornando-se referência em cuidado e amparo às famílias.</p>
+          </div>
+        </div>
+
+        <div class="pilar-card">
+          <div class="pilar-header">
+            <h3>VALORES</h3>
+          </div>
+          <div class="pilar-content">
+            <p class="pilar-text">Nossos valores são a base de cada gesto e decisão: empatia para compreender, dignidade para honrar, acolhimento para confortar e respeito à vida em todas as suas fases, garantindo um serviço ético, humano e comprometido com as famílias.</p>
+          </div>
         </div>
       </div>
 
-      <div class="pilar-card">
-        <div class="pilar-header">
-          <h3>VISÃO</h3>
-        </div>
-        <div class="pilar-content">
-          <p class="pilar-text">Transformar a forma como Porto Alegre e o Rio Grande do Sul vivenciam o luto, promovendo uma cultura de acolhimento humanizado<br>inovação nos serviços e apoio integral, tornando-se referência em cuidado e amparo às famílias.</p>
-        </div>
-      </div>
-
-      <div class="pilar-card">
-        <div class="pilar-header">
-          <h3>VALORES</h3>
-        </div>
-        <div class="pilar-content">
-          <p class="pilar-text">Nossos valores são a base de cada gesto e decisão: empatia para compreender, dignidade para honrar, acolhimento para confortar<br>e respeito à vida em todas as suas fases, garantindo um serviço ético, humano e comprometido com as famílias.</p>
-        </div>
+      <div class="pilares-dots" role="tablist" aria-label="Navegação dos pilares">
+        <button class="pilares-dot active" data-index="0" aria-label="Missão" role="tab"></button>
+        <button class="pilares-dot" data-index="1" aria-label="Visão" role="tab"></button>
+        <button class="pilares-dot" data-index="2" aria-label="Valores" role="tab"></button>
       </div>
     </div>
   </section>
@@ -922,8 +1053,8 @@
           prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-          320: { slidesPerView: 1, spaceBetween: 15 },
-          480: { slidesPerView: 1, spaceBetween: 15 },
+          320: { slidesPerView: 2, spaceBetween: 10 },
+          480: { slidesPerView: 2, spaceBetween: 12 },
           768: { slidesPerView: 2, spaceBetween: 20 },
           1024: { slidesPerView: 2.5, spaceBetween: 25 },
           1200: { slidesPerView: 3, spaceBetween: 30 },
@@ -950,7 +1081,7 @@
         });
 
         // Fechar menu ao clicar em um link
-        var menuLinks = menuWrapper.querySelectorAll('.menu-link');
+        var menuLinks = menuWrapper.querySelectorAll('.menu-link:not(.dropdown-trigger), .dropdown-link');
         menuLinks.forEach(function (link) {
           link.addEventListener('click', function () {
             navTrigger.classList.remove('active');
@@ -989,6 +1120,30 @@
           if (dropdownTrigger) dropdownTrigger.setAttribute('aria-expanded', 'false');
         }
       });
+
+      // Carrossel Pilares (mobile)
+      var pilContainer = document.querySelector('.pilares-container');
+      var pilDots = document.querySelectorAll('.pilares-dot');
+
+      if (pilContainer && pilDots.length) {
+        var cards = pilContainer.querySelectorAll('.pilar-card');
+
+        function updateDots() {
+          var scrollLeft = pilContainer.scrollLeft;
+          var cardWidth = pilContainer.offsetWidth;
+          var index = Math.round(scrollLeft / (cards[0].offsetWidth + 16));
+          pilDots.forEach(function (d, i) { d.classList.toggle('active', i === index); });
+        }
+
+        pilContainer.addEventListener('scroll', updateDots, { passive: true });
+
+        pilDots.forEach(function (dot) {
+          dot.addEventListener('click', function () {
+            var idx = parseInt(dot.getAttribute('data-index'));
+            pilContainer.scrollTo({ left: idx * (cards[0].offsetWidth + 16), behavior: 'smooth' });
+          });
+        });
+      }
     });
   </script>
 
