@@ -1,376 +1,524 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Diretoria - Asas Assistência Familiar</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="css/site-shared.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/variables.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/typography.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/padrao-historia.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/responsive-overrides.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <title>Diretoria - Asas Assistência Familiar</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link href="css/site-shared.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/variables.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/typography.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/padrao-historia.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/responsive-overrides.css?v=20260226" rel="stylesheet" type="text/css" />
+    <link
+      href="images/favicon.png?v=1"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      href="images/favicon.png?v=1"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link href="images/favicon.png?v=1" rel="shortcut icon" type="image/png" />
 
-  <link href="images/favicon.png?v=1" rel="icon" type="image/png" sizes="32x32" />
-  <link href="images/favicon.png?v=1" rel="apple-touch-icon" sizes="180x180" />
-  <link href="images/favicon.png?v=1" rel="shortcut icon" type="image/png" />
-
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link href="https://fonts.gstatic.com" rel="preconnect" />
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-  <script
-    type="text/javascript">WebFont.load({ google: { families: ["IBM Plex Sans:100,200,300,regular,500,600,700", "IBM Plex Serif:100,200,300,regular,500,600,700"] } });</script>
-  <style>
-    /* RESET BÁSICO */
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    .header .menu-link:hover,
-    .header .menu-link:active,
-    .header .menu-link:focus,
-    .header .dropdown-trigger:hover,
-    .header .dropdown-trigger:active,
-    .header .dropdown-trigger:focus,
-    .header .dropdown-menu-wrapper>a:hover,
-    .header .dropdown-menu-wrapper>a:active,
-    .header .dropdown-menu-wrapper>a:focus,
-    .header .nav-logo:hover,
-    .header .nav-logo:active,
-    .header .nav-logo:focus,
-    .header .w-nav-brand:hover,
-    .header .w-nav-brand:active,
-    .header .w-nav-brand:focus {
-      background: transparent !important;
-      background-color: transparent !important;
-    }
-
-    /* BANNER DIRETORES */
-    .page-banner {
-      background: linear-gradient(135deg, #003B70 0%, #004b85 100%);
-      padding: 60px 20px;
-      text-align: center;
-      color: #fff;
-    }
-
-    .page-banner h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin: 0 0 15px 0;
-      color: #fff !important;
-      text-transform: uppercase;
-    }
-
-    .page-banner p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    /* SEÇÃO DIRETORES */
-    .diretores-section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .diretor-card {
-      display: flex;
-      gap: 60px;
-      align-items: flex-start;
-      margin-bottom: 80px;
-    }
-
-    .diretor-card:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    .diretor-foto {
-      flex: 0 0 300px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-    }
-
-    .diretor-foto img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .diretor-info {
-      flex: 1;
-    }
-
-    .diretor-nome {
-      color: #003B70;
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .diretor-texto p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #444;
-      margin-bottom: 18px;
-      text-align: justify;
-    }
-
-    .diretor-linkedin {
-      display: none;
-    }
-
-    /* CTA SECTION */
-    .cta-section {
-      background: linear-gradient(135deg, #003B70 0%, #004b85 100%);
-      padding: 60px 20px;
-      text-align: center;
-      margin: 60px 0 0 0;
-    }
-
-    .cta-section h3 {
-      color: #fff;
-      font-size: 1.8rem;
-      margin-bottom: 25px;
-      font-weight: 600;
-    }
-
-    .cta-button {
-      background: #e74c3c;
-      color: #fff;
-      padding: 16px 40px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1rem;
-      display: inline-block;
-      transition: all 0.3s;
-      box-shadow: 0 4px 16px rgba(231, 76, 60, 0.3);
-    }
-
-    .cta-button:hover {
-      background: #c0392b;
-      box-shadow: 0 6px 24px rgba(231, 76, 60, 0.4);
-      transform: translateY(-2px);
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 968px) {
-      .diretor-card,
-      .diretor-card:nth-child(even) {
-        flex-direction: column;
-        align-items: center;
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [
+            "IBM Plex Sans:100,200,300,regular,500,600,700",
+            "IBM Plex Serif:100,200,300,regular,500,600,700",
+          ],
+        },
+      });
+    </script>
+    <style>
+      /* RESET BÁSICO */
+      body {
+        margin: 0;
+        padding: 0;
       }
 
-      .diretor-foto {
-        flex: 0 0 auto;
-        max-width: 260px;
+      .header .menu-link:hover,
+      .header .menu-link:active,
+      .header .menu-link:focus,
+      .header .dropdown-trigger:hover,
+      .header .dropdown-trigger:active,
+      .header .dropdown-trigger:focus,
+      .header .dropdown-menu-wrapper > a:hover,
+      .header .dropdown-menu-wrapper > a:active,
+      .header .dropdown-menu-wrapper > a:focus,
+      .header .nav-logo:hover,
+      .header .nav-logo:active,
+      .header .nav-logo:focus,
+      .header .w-nav-brand:hover,
+      .header .w-nav-brand:active,
+      .header .w-nav-brand:focus {
+        background: transparent !important;
+        background-color: transparent !important;
       }
-    }
 
-    @media (max-width: 768px) {
+      /* BANNER DIRETORES */
+      .page-banner {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+        padding: 60px 20px;
+        text-align: center;
+        color: #fff;
+      }
+
       .page-banner h1 {
-        font-size: 2rem;
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0 0 15px 0;
+        color: #fff !important;
+        text-transform: uppercase;
+      }
+
+      .page-banner p {
+        font-size: 1.125rem;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      /* SEÇÃO DIRETORES */
+      .diretores-section {
+        padding: 80px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
       }
 
       .diretor-card {
-        padding: 16px;
-        gap: 16px;
+        display: flex;
+        gap: 60px;
+        align-items: flex-start;
+        margin-bottom: 80px;
+      }
+
+      .diretor-card:nth-child(even) {
+        flex-direction: row-reverse;
       }
 
       .diretor-foto {
-        max-width: 180px;
+        flex: 0 0 300px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      .diretor-foto img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .diretor-info {
+        flex: 1;
       }
 
       .diretor-nome {
-        font-size: 1.3rem;
-        margin-bottom: 12px;
+        color: var(--primary-color);
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
 
       .diretor-texto p {
-        font-size: 0.92rem;
-        line-height: 1.65;
-        margin-bottom: 12px;
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        margin-bottom: 18px;
+        text-align: justify;
       }
-    }
 
-  </style>
-</head>
+      .diretor-linkedin {
+        display: none;
+      }
 
-<body>
+      /* CTA SECTION */
+      .cta-section {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+        padding: 60px 20px;
+        text-align: center;
+        margin: 60px 0 0 0;
+      }
 
-  <div data-animation="default" class="header w-nav" role="banner">
-    <div class="container">
-      <div class="main-container w-container">
-        <div class="nav-wrapper">
+      .cta-section h3 {
+        color: #fff;
+        font-size: 1.875rem;
+        margin-bottom: 25px;
+        font-weight: 600;
+      }
 
-          <a href="index.html" class="nav-logo w-nav-brand">
-            <img loading="lazy" src="images/logo-asas.png" alt="Asas Familiar" class="site-logo" />
-          </a>
+      .cta-button {
+        background: var(--secondary-color);
+        color: #fff;
+        padding: 16px 40px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.125rem;
+        display: inline-block;
+        transition: all 0.3s;
+        box-shadow: 0 4px 16px rgba(231, 76, 60, 0.3);
+      }
 
-          <nav role="navigation" class="menu-wrapper w-nav-menu"
-            style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
+      .cta-button:hover {
+        background: var(--secondary-dark);
+        box-shadow: 0 6px 24px rgba(231, 76, 60, 0.4);
+        transform: translateY(-2px);
+      }
 
-            <div class="menu-item-wrapper">
-              <div class="menu-items">
-                <a href="index.html" class="menu-link" style="color: #003B70;">Home</a>
+      /* RESPONSIVE */
+      @media (max-width: 968px) {
+        .diretor-card,
+        .diretor-card:nth-child(even) {
+          flex-direction: column;
+          align-items: center;
+        }
 
-                <div class="dropdown-menu-wrapper" style="position: relative;">
-                  <a href="#" class="menu-link dropdown-trigger" style="color: #003B70;">Quem Somos ▾</a>
-                  <div class="dropdown-menu">
-                    <a href="quem-somos.html" class="dropdown-link">Sobre nós</a>
-                    <a href="historia.html" class="dropdown-link">Nossa história</a>
-                    <a href="diretoria.html" class="dropdown-link">Diretoria</a>
-                    <a href="parceiros.html" class="dropdown-link">Parceiros</a>
+        .diretor-foto {
+          flex: 0 0 auto;
+          max-width: 260px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .page-banner h1 {
+          font-size: 2rem;
+        }
+
+        .diretor-card {
+          padding: 16px;
+          gap: 16px;
+        }
+
+        .diretor-foto {
+          max-width: 180px;
+        }
+
+        .diretor-nome {
+          font-size: 1.25rem;
+          margin-bottom: 12px;
+        }
+
+        .diretor-texto p {
+          font-size: 0.875rem;
+          line-height: 1.65;
+          margin-bottom: 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div data-animation="default" class="header w-nav" role="banner">
+      <div class="container">
+        <div class="main-container w-container">
+          <div class="nav-wrapper">
+            <a href="index.html" class="nav-logo w-nav-brand">
+              <img
+                loading="lazy"
+                src="images/logo-asas.png"
+                alt="Asas Familiar"
+                class="site-logo"
+              />
+            </a>
+
+            <nav
+              role="navigation"
+              class="menu-wrapper w-nav-menu"
+              style="
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div class="menu-item-wrapper">
+                <div class="menu-items">
+                  <a href="index.html" class="menu-link"
+                    >Home</a
+                  >
+
+                  <div class="dropdown-menu-wrapper" style="position: relative">
+                    <a
+                      href="#"
+                      class="menu-link dropdown-trigger"
+                     
+                      >Quem Somos ▾</a
+                    >
+                    <div class="dropdown-menu">
+                      <a href="quem-somos.html" class="dropdown-link"
+                        >Sobre nós</a
+                      >
+                      <a href="historia.html" class="dropdown-link"
+                        >Nossa história</a
+                      >
+                      <a href="diretoria.html" class="dropdown-link"
+                        >Diretoria</a
+                      >
+                      <a href="parceiros.html" class="dropdown-link"
+                        >Parceiros</a
+                      >
+                    </div>
                   </div>
+
+                  <a
+                    href="servicos.html"
+                    class="menu-link"
+                   
+                    >Nossos Serviços</a
+                  >
+                  <a
+                    href="contato.html"
+                    class="menu-link"
+                   
+                    >Contato</a
+                  >
                 </div>
-
-                <a href="servicos.html" class="menu-link" style="color: #003B70;">Nossos Serviços</a>
-                <a href="contato.html" class="menu-link" style="color: #003B70;">Contato</a>
               </div>
+
+              <div class="nav-button-wrapper">
+                <a
+                  href="https://wa.me/5551980201159"
+                  target="_blank"
+                  class="primary-button w-inline-block"
+                >
+                  Falar com Atendente
+                </a>
+              </div>
+            </nav>
+
+            <div class="nav-trigger w-nav-button">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-
-            <div class="nav-button-wrapper">
-              <a href="https://wa.me/5551980201159" target="_blank" class="primary-button w-inline-block">
-                Falar com Atendente
-              </a>
-            </div>
-
-          </nav>
-
-          <div class="nav-trigger w-nav-button">
-            <span></span>
-            <span></span>
-            <span></span>
           </div>
-
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- BANNER DIRETORES -->
-  <section class="page-banner">
-    <h1>Diretores</h1>
-    <p>Nossa diretoria atua com ética, transparência e dedicação para fortalecer a<br>missão da ASAS Familiar.</p>
-  </section>
+    <!-- BANNER DIRETORES -->
+    <section class="page-banner">
+      <h1>Diretores</h1>
+      <p>
+        Nossa diretoria atua com ética, transparência e dedicação para
+        fortalecer a<br />missão da ASAS Familiar.
+      </p>
+    </section>
 
-  <!-- DIRETORES -->
-  <section class="diretores-section">
-    
-    <!-- NILTON BELSARENA -->
-    <div class="diretor-card">
-      <div class="diretor-foto">
-        <img src="images/Nilton.webp" alt="Nilton Belsarena" />
-      </div>
-      <div class="diretor-info">
-        <h2 class="diretor-nome">Nilton Belsarena</h2>
-        <div class="diretor-texto">
-          <p>Na liderança da ASAS FAMILIAR está Nilton Belsarena, Diretor Presidente, um profissional cuja trajetória é marcada pela inovação, coragem e compromisso social. Nascido no Saladeiro, Quaraí-RS, iniciou sua vida no futebol, mas foi a carreira acadêmica que o direcionou ao empreendedorismo. Formado em Jornalismo, Administração de Empresas e Corretor de Seguros Profissional, construiu uma trajetória sólida em diferentes áreas.</p>
-          <p>Em 1994, criou o projeto "Empréstimo Consignado em folha de pagamento via sistema bancário", implementado pelo Banrisul em 1996, que revolucionou o mercado financeiro brasileiro e se tornou um dos maiores negócios do mundo. Por essa conquista, recebeu a Medalha do Mérito Farroupilha, além do Título de Cidadão de Porto Alegre.</p>
-          <p>Comunicador de impacto, apresentador de TV, diretor e jornalista, tem como marca registrada a criatividade e o cuidado humanizado. Com mais de 30 anos de experiência liderando projetos, equipes e iniciativas sociais, Nilton Belsarena construiu uma carreira voltada para o impacto humano, sempre focado em oferecer soluções que promovem dignidade, acolhimento e bem-estar às pessoas que atende. Hoje, lidera a ASAS FAMILIAR com dedicação e visão, promovendo acolhimento, dignidade e apoio integral às famílias.</p>
+    <!-- DIRETORES -->
+    <section class="diretores-section">
+      <!-- NILTON BELSARENA -->
+      <div class="diretor-card">
+        <div class="diretor-foto">
+          <img src="images/Nilton.webp" alt="Nilton Belsarena" />
         </div>
-        <a href="#" class="diretor-linkedin" target="_blank">Ver LinkedIn</a>
-      </div>
-    </div>
-
-    <!-- CAMILA FONSECA -->
-    <div class="diretor-card">
-      <div class="diretor-foto">
-        <img src="images/camila.webp" alt="Camila Fonseca" />
-      </div>
-      <div class="diretor-info">
-        <h2 class="diretor-nome">Camila Fonseca</h2>
-        <div class="diretor-texto">
-          <p>Com uma trajetória dedicada ao cuidado integral do ser humano, Camila Fonseca, nossa Diretora Administrativa, é uma liderança feminina inspiradora na ASAS FAMILIAR.</p>
-          <p>Camila traz uma base sólida, sendo formada em Administração, com MBA em Gestão de Negócios e Pessoas e Pós-Graduação em Práticas Integrativas de Cuidados com a Saúde. Seu conhecimento é ampliado por especializações como Mestre Reiki e Consteladora Familiar, evidenciando sua visão holística e seu compromisso com a saúde integral.</p>
-          <p>Com mais de 30 anos de experiência corporativa em gestão de pessoas, sua abordagem na ASAS FAMILIAR une conhecimento técnico, gestão responsável e sensibilidade humana. Camila é guiada pela missão de despertar o potencial e promover o equilíbrio em cada indivíduo, oferecendo às famílias um apoio que vai além do convencional.</p>
-          <p>Há 4 anos, atua também como Terapeuta Integrativa, acompanhando de perto as dores de seus clientes e pacientes. Sua prática é marcada pela escuta ativa, empatia profunda e uma notável habilidade em transformar desafios em caminhos de transformação e fortalecimento.</p>
-          <p>Dentro da ASAS FAMILIAR ela representa o compromisso inegociável com a humanização, a empatia e o acolhimento emocional. Estes são pilares essenciais para transformar momentos delicados em experiências de serenidade e fortalecimento.</p>
-          <p>Sua presença e liderança reafirmam a visão da ASAS FAMILIAR de integrar cuidado espiritual, emocional, humano e administrativo em cada serviço que prestamos, garantindo que a excelência da gestão caminhe lado a lado com a profundidade do acolhimento.</p>
+        <div class="diretor-info">
+          <h2 class="diretor-nome">Nilton Belsarena</h2>
+          <div class="diretor-texto">
+            <p>
+              Na liderança da ASAS FAMILIAR está Nilton Belsarena, Diretor
+              Presidente, um profissional cuja trajetória é marcada pela
+              inovação, coragem e compromisso social. Nascido no Saladeiro,
+              Quaraí-RS, iniciou sua vida no futebol, mas foi a carreira
+              acadêmica que o direcionou ao empreendedorismo. Formado em
+              Jornalismo, Administração de Empresas e Corretor de Seguros
+              Profissional, construiu uma trajetória sólida em diferentes áreas.
+            </p>
+            <p>
+              Em 1994, criou o projeto "Empréstimo Consignado em folha de
+              pagamento via sistema bancário", implementado pelo Banrisul em
+              1996, que revolucionou o mercado financeiro brasileiro e se tornou
+              um dos maiores negócios do mundo. Por essa conquista, recebeu a
+              Medalha do Mérito Farroupilha, além do Título de Cidadão de Porto
+              Alegre.
+            </p>
+            <p>
+              Comunicador de impacto, apresentador de TV, diretor e jornalista,
+              tem como marca registrada a criatividade e o cuidado humanizado.
+              Com mais de 30 anos de experiência liderando projetos, equipes e
+              iniciativas sociais, Nilton Belsarena construiu uma carreira
+              voltada para o impacto humano, sempre focado em oferecer soluções
+              que promovem dignidade, acolhimento e bem-estar às pessoas que
+              atende. Hoje, lidera a ASAS FAMILIAR com dedicação e visão,
+              promovendo acolhimento, dignidade e apoio integral às famílias.
+            </p>
+          </div>
+          <a href="#" class="diretor-linkedin" target="_blank">Ver LinkedIn</a>
         </div>
-        <a href="#" class="diretor-linkedin" target="_blank">Ver LinkedIn</a>
       </div>
-    </div>
 
-  </section>
-
-  <!-- FOOTER -->
-  <section class="footer" id="contato">
-    <div class="footer-content footer-flex">
-      <img loading="lazy" src="images/logo-asas.png" alt="Logotipo da ASAS Familiar, representando assistência social e amparo familiar" class="footer-logo" />
-      <div class="footer-text">
-        <p><strong>ASAS Familiar</strong><br>
-        Associação de Assistência Social e Amparo Familiar.<br>
-        Av. Borges de Medeiros Nº410, Sala 710 / Centro - Porto Alegre - RS<br>
-        Tel: (51) 98020-1159<br>
-        E-mail: contato@asasfamiliar.com.br</p>
+      <!-- CAMILA FONSECA -->
+      <div class="diretor-card">
+        <div class="diretor-foto">
+          <img src="images/camila.webp" alt="Camila Fonseca" />
+        </div>
+        <div class="diretor-info">
+          <h2 class="diretor-nome">Camila Fonseca</h2>
+          <div class="diretor-texto">
+            <p>
+              Com uma trajetória dedicada ao cuidado integral do ser humano,
+              Camila Fonseca, nossa Diretora Administrativa, é uma liderança
+              feminina inspiradora na ASAS FAMILIAR.
+            </p>
+            <p>
+              Camila traz uma base sólida, sendo formada em Administração, com
+              MBA em Gestão de Negócios e Pessoas e Pós-Graduação em Práticas
+              Integrativas de Cuidados com a Saúde. Seu conhecimento é ampliado
+              por especializações como Mestre Reiki e Consteladora Familiar,
+              evidenciando sua visão holística e seu compromisso com a saúde
+              integral.
+            </p>
+            <p>
+              Com mais de 30 anos de experiência corporativa em gestão de
+              pessoas, sua abordagem na ASAS FAMILIAR une conhecimento técnico,
+              gestão responsável e sensibilidade humana. Camila é guiada pela
+              missão de despertar o potencial e promover o equilíbrio em cada
+              indivíduo, oferecendo às famílias um apoio que vai além do
+              convencional.
+            </p>
+            <p>
+              Há 4 anos, atua também como Terapeuta Integrativa, acompanhando de
+              perto as dores de seus clientes e pacientes. Sua prática é marcada
+              pela escuta ativa, empatia profunda e uma notável habilidade em
+              transformar desafios em caminhos de transformação e
+              fortalecimento.
+            </p>
+            <p>
+              Dentro da ASAS FAMILIAR ela representa o compromisso inegociável
+              com a humanização, a empatia e o acolhimento emocional. Estes são
+              pilares essenciais para transformar momentos delicados em
+              experiências de serenidade e fortalecimento.
+            </p>
+            <p>
+              Sua presença e liderança reafirmam a visão da ASAS FAMILIAR de
+              integrar cuidado espiritual, emocional, humano e administrativo em
+              cada serviço que prestamos, garantindo que a excelência da gestão
+              caminhe lado a lado com a profundidade do acolhimento.
+            </p>
+          </div>
+          <a href="#" class="diretor-linkedin" target="_blank">Ver LinkedIn</a>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="footer-bottom footer-bottom-small">
-      <p>© 2026 ASAS Familiar. Todos os direitos reservados. <a href="termo-de-uso.html">Termo de Uso</a> | <a href="politica-de-privacidade.html">Política de Privacidade</a></p>
-    </div>
-  </section>
+    <!-- FOOTER -->
+    <section class="footer" id="contato">
+      <div class="footer-content footer-flex">
+        <img
+          loading="lazy"
+          src="images/logo-asas.png"
+          alt="Logotipo da ASAS Familiar, representando assistência social e amparo familiar"
+          class="footer-logo"
+        />
+        <div class="footer-text">
+          <p>
+            <strong>ASAS Familiar</strong><br />
+            Associação de Assistência Social e Amparo Familiar.<br />
+            Av. Borges de Medeiros Nº410, Sala 710 / Centro - Porto Alegre -
+            RS<br />
+            Tel: (51) 98020-1159<br />
+            E-mail: contato@asasfamiliar.com.br
+          </p>
+        </div>
+      </div>
 
-  <script src="js/jquery.js" type="text/javascript"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Menu Mobile Toggle
-      var navTrigger = document.querySelector('.nav-trigger');
-      var menuWrapper = document.querySelector('.menu-wrapper');
+      <div class="footer-bottom footer-bottom-small">
+        <p>
+          © 2026 ASAS Familiar. Todos os direitos reservados.
+          <a href="termo-de-uso.html">Termo de Uso</a> |
+          <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        </p>
+      </div>
+    </section>
 
-      if (navTrigger && menuWrapper) {
-        navTrigger.addEventListener('click', function (e) {
-          e.preventDefault();
-          navTrigger.classList.toggle('active');
-          menuWrapper.classList.toggle('open');
-        });
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Menu Mobile Toggle
+        var navTrigger = document.querySelector(".nav-trigger");
+        var menuWrapper = document.querySelector(".menu-wrapper");
 
-        // Fechar menu ao clicar em um link
-        var menuLinks = menuWrapper.querySelectorAll('.menu-link:not(.dropdown-trigger), .dropdown-link');
-        menuLinks.forEach(function (link) {
-          link.addEventListener('click', function () {
-            navTrigger.classList.remove('active');
-            menuWrapper.classList.remove('open');
+        if (navTrigger && menuWrapper) {
+          navTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            navTrigger.classList.toggle("active");
+            menuWrapper.classList.toggle("open");
           });
-        });
 
-        // Fechar menu ao clicar fora
-        document.addEventListener('click', function (e) {
-          if (!navTrigger.contains(e.target) && !menuWrapper.contains(e.target)) {
-            navTrigger.classList.remove('active');
-            menuWrapper.classList.remove('open');
+          // Fechar menu ao clicar em um link
+          var menuLinks = menuWrapper.querySelectorAll(
+            ".menu-link:not(.dropdown-trigger), .dropdown-link",
+          );
+          menuLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+              navTrigger.classList.remove("active");
+              menuWrapper.classList.remove("open");
+            });
+          });
+
+          // Fechar menu ao clicar fora
+          document.addEventListener("click", function (e) {
+            if (
+              !navTrigger.contains(e.target) &&
+              !menuWrapper.contains(e.target)
+            ) {
+              navTrigger.classList.remove("active");
+              menuWrapper.classList.remove("open");
+            }
+          });
+        }
+
+        // Dropdown menu em mobile
+        var dropdownTrigger = document.querySelector(".dropdown-trigger");
+        var dropdownMenu = document.querySelector(".dropdown-menu");
+        var dropdownWrapper = document.querySelector(".dropdown-menu-wrapper");
+
+        if (dropdownTrigger) {
+          dropdownTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            dropdownMenu.classList.toggle("show");
+          });
+        }
+
+        document.addEventListener("click", function (e) {
+          if (dropdownWrapper && !dropdownWrapper.contains(e.target)) {
+            dropdownMenu.classList.remove("show");
           }
         });
-      }
-
-      // Dropdown menu em mobile
-      var dropdownTrigger = document.querySelector('.dropdown-trigger');
-      var dropdownMenu = document.querySelector('.dropdown-menu');
-      var dropdownWrapper = document.querySelector('.dropdown-menu-wrapper');
-
-      if (dropdownTrigger) {
-        dropdownTrigger.addEventListener('click', function (e) {
-          e.preventDefault();
-          dropdownMenu.classList.toggle('show');
-        });
-      }
-
-      document.addEventListener('click', function (e) {
-        if (dropdownWrapper && !dropdownWrapper.contains(e.target)) {
-          dropdownMenu.classList.remove('show');
-        }
       });
-    });
-  </script>
-
-</body>
-
+    </script>
+  </body>
 </html>
-

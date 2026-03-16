@@ -1,584 +1,793 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nossos Parceiros - Asas Assistência Familiar</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="css/site-shared.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/variables.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/typography.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/padrao-historia.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/responsive-overrides.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <title>Nossos Parceiros - Asas Assistência Familiar</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link href="css/site-shared.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/variables.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/typography.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/padrao-historia.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/responsive-overrides.css?v=20260226" rel="stylesheet" type="text/css" />
+    <link
+      href="images/favicon.png?v=1"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      href="images/favicon.png?v=1"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link href="images/favicon.png?v=1" rel="shortcut icon" type="image/png" />
 
-  <link href="images/favicon.png?v=1" rel="icon" type="image/png" sizes="32x32" />
-  <link href="images/favicon.png?v=1" rel="apple-touch-icon" sizes="180x180" />
-  <link href="images/favicon.png?v=1" rel="shortcut icon" type="image/png" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [
+            "IBM Plex Sans:100,200,300,regular,500,600,700",
+            "IBM Plex Serif:100,200,300,regular,500,600,700",
+          ],
+        },
+      });
+    </script>
+    <style>
+      /* RESET BÁSICO */
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link href="https://fonts.gstatic.com" rel="preconnect" />
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-  <script
-    type="text/javascript">WebFont.load({ google: { families: ["IBM Plex Sans:100,200,300,regular,500,600,700", "IBM Plex Serif:100,200,300,regular,500,600,700"] } });</script>
-  <style>
-    /* RESET BÁSICO */
-    body {
-      margin: 0;
-      padding: 0;
-    }
+      .header .menu-link:hover,
+      .header .menu-link:active,
+      .header .menu-link:focus,
+      .header .dropdown-trigger:hover,
+      .header .dropdown-trigger:active,
+      .header .dropdown-trigger:focus,
+      .header .dropdown-menu-wrapper > a:hover,
+      .header .dropdown-menu-wrapper > a:active,
+      .header .dropdown-menu-wrapper > a:focus,
+      .header .nav-logo:hover,
+      .header .nav-logo:active,
+      .header .nav-logo:focus,
+      .header .w-nav-brand:hover,
+      .header .w-nav-brand:active,
+      .header .w-nav-brand:focus {
+        background: transparent !important;
+        background-color: transparent !important;
+      }
 
-    .header .menu-link:hover,
-    .header .menu-link:active,
-    .header .menu-link:focus,
-    .header .dropdown-trigger:hover,
-    .header .dropdown-trigger:active,
-    .header .dropdown-trigger:focus,
-    .header .dropdown-menu-wrapper>a:hover,
-    .header .dropdown-menu-wrapper>a:active,
-    .header .dropdown-menu-wrapper>a:focus,
-    .header .nav-logo:hover,
-    .header .nav-logo:active,
-    .header .nav-logo:focus,
-    .header .w-nav-brand:hover,
-    .header .w-nav-brand:active,
-    .header .w-nav-brand:focus {
-      background: transparent !important;
-      background-color: transparent !important;
-    }
-
-    /* BANNER */
-    .page-banner {
-      background: linear-gradient(135deg, #003B70 0%, #005A9C 100%);
-      padding: 60px 20px;
-      text-align: center;
-      color: #fff;
-    }
-
-    .page-banner h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin: 0;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .page-banner p {
-      font-size: 1.1rem;
-      margin: 20px auto 0;
-      max-width: 700px;
-      line-height: 1.6;
-      font-style: italic;
-    }
-
-    /* LOGO SECTION */
-    .logo-section {
-      padding: 60px 20px;
-      text-align: center;
-      background: #fff;
-    }
-
-    .logo-section img {
-      max-width: 280px;
-      height: auto;
-    }
-
-    /* PARCEIROS INTRO */
-    .parceiros-intro {
-      max-width: 900px;
-      margin: 0 auto 60px;
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    .parceiros-intro h2 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #003B70;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-
-    .parceiros-intro p {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.8;
-    }
-
-    /* PARCEIROS GRID */
-    .parceiros-section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px 80px;
-    }
-
-    .parceiros-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      gap: 40px;
-    }
-
-    .parceiro-card {
-      background: #fff;
-      border: 1px solid #e5e5e5;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: box-shadow 0.3s, transform 0.3s;
-    }
-
-    .parceiro-card:hover {
-      box-shadow: 0 8px 24px rgba(0, 59, 112, 0.15);
-      transform: translateY(-4px);
-    }
-
-    .parceiro-logo {
-      background: #f5f5f5;
-      padding: 40px;
-      text-align: center;
-      min-height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .parceiro-logo img {
-      max-width: 100%;
-      max-height: 150px;
-      height: auto;
-    }
-
-    .parceiro-info {
-      padding: 30px;
-    }
-
-    .parceiro-info h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #003B70;
-      margin: 0 0 15px 0;
-      text-transform: uppercase;
-    }
-
-    .parceiro-info p {
-      font-size: 0.95rem;
-      color: #666;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .parceiro-link {
-      color: #003B70;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .parceiro-link:hover {
-      color: var(--secondary-color);
-    }
-
-    /* CTA SECTION */
-    .cta-section {
-      background: linear-gradient(135deg, #003B70 0%, #005A9C 100%);
-      padding: 50px 20px;
-      text-align: center;
-      margin: 60px 0 0;
-    }
-
-    .cta-section h3 {
-      color: #fff;
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-bottom: 25px;
-      line-height: 1.4;
-    }
-
-    .cta-button {
-      background-color: var(--secondary-color);
-      color: #fff;
-      padding: 16px 40px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1rem;
-      display: inline-block;
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    .cta-button:hover {
-      background-color: #c0392b;
-      transform: scale(1.05);
-    }
-
-    /* FOOTER */
-    .footer {
-      background-color: #f5f5f5;
-      padding: 30px 20px 20px;
-    }
-
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .footer-logo {
-      height: 80px;
-      width: auto;
-    }
-
-    .footer-info {
-      flex: 1;
-      min-width: 250px;
-    }
-
-    .footer-info p {
-      color: #003B70;
-      margin: 8px 0;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .footer-info strong {
-      font-weight: 700;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      padding-top: 15px;
-      border-top: 1px solid #d0d0d0;
-      margin-top: 15px;
-    }
-
-    .footer-bottom p {
-      color: #003B70;
-      font-size: 0.85rem;
-      margin: 0;
-    }
-
-    @media (max-width: 768px) {
-      .parceiros-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+      /* BANNER */
+      .page-banner {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+        padding: 60px 20px;
+        text-align: center;
+        color: #fff;
       }
 
       .page-banner h1 {
-        font-size: 2rem;
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
 
-      .site-logo {
-        max-height: 44px;
+      .page-banner p {
+        font-size: 1.125rem;
+        margin: 20px auto 0;
+        max-width: 700px;
+        line-height: 1.6;
+        font-style: italic;
+      }
+
+      /* LOGO SECTION */
+      .logo-section {
+        padding: 60px 20px;
+        text-align: center;
+        background: #fff;
+      }
+
+      .logo-section img {
+        max-width: 280px;
+        height: auto;
+      }
+
+      /* PARCEIROS INTRO */
+      .parceiros-intro {
+        max-width: 900px;
+        margin: 0 auto 60px;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      .parceiros-intro h2 {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+
+      .parceiros-intro p {
+        font-size: 1rem;
+        color: var(--text-muted);
+        line-height: 1.8;
+      }
+
+      /* PARCEIROS GRID */
+      .parceiros-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+      }
+
+      .parceiros-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 40px;
+      }
+
+      .parceiro-card {
+        background: #fff;
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        overflow: hidden;
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+
+      .parceiro-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 59, 112, 0.15);
+        transform: translateY(-4px);
       }
 
       .parceiro-logo {
-        padding: 20px 12px;
-        min-height: 120px;
+        background: var(--background-color);
+        padding: 40px;
+        text-align: center;
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .parceiro-logo img {
-        max-height: 80px;
+        max-width: 100%;
+        max-height: 150px;
+        height: auto;
       }
 
       .parceiro-info {
-        padding: 14px;
+        padding: 30px;
       }
 
       .parceiro-info h3 {
-        font-size: 0.85rem;
-        margin-bottom: 8px;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin: 0 0 15px 0;
+        text-transform: uppercase;
       }
 
       .parceiro-info p {
-        font-size: 0.78rem;
-        line-height: 1.55;
-        margin-bottom: 10px;
+        font-size: 1rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+        margin-bottom: 20px;
       }
 
       .parceiro-link {
-        font-size: 0.8rem;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .parceiro-link:hover {
+        color: var(--secondary-color);
+      }
+
+      /* CTA SECTION */
+      .cta-section {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+        padding: 50px 20px;
+        text-align: center;
+        margin: 60px 0 0;
+      }
+
+      .cta-section h3 {
+        color: #fff;
+        font-size: 1.875rem;
+        font-weight: 600;
+        margin-bottom: 25px;
+        line-height: 1.4;
+      }
+
+      .cta-button {
+        background-color: var(--secondary-color);
+        color: #fff;
+        padding: 16px 40px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.125rem;
+        display: inline-block;
+        transition:
+          background 0.3s,
+          transform 0.2s;
+      }
+
+      .cta-button:hover {
+        background-color: #c0392b;
+        transform: scale(1.05);
+      }
+
+      /* FOOTER */
+      .footer {
+        background-color: var(--background-color);
+        padding: 30px 20px 20px;
       }
 
       .footer-content {
-        flex-direction: column;
-        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        flex-wrap: wrap;
       }
-    }
 
-  </style>
-</head>
+      .footer-logo {
+        height: 80px;
+        width: auto;
+      }
 
-<body>
+      .footer-info {
+        flex: 1;
+        min-width: 250px;
+      }
 
-  <!-- HEADER -->
-  <div data-animation="default" class="header w-nav" role="banner">
-    <div class="container">
-      <div class="main-container w-container">
-        <div class="nav-wrapper">
+      .footer-info p {
+        color: var(--primary-color);
+        margin: 8px 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
 
-          <a href="index.html" class="nav-logo w-nav-brand">
-            <img loading="lazy" src="images/logo-asas.png" alt="Asas Familiar" class="site-logo" />
-          </a>
+      .footer-info strong {
+        font-weight: 700;
+      }
 
-          <nav role="navigation" class="menu-wrapper w-nav-menu"
-            style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
+      .footer-bottom {
+        text-align: center;
+        padding-top: 15px;
+        border-top: 1px solid #d0d0d0;
+        margin-top: 15px;
+      }
 
-            <div class="menu-item-wrapper">
-              <div class="menu-items">
-                <a href="index.html" class="menu-link" style="color: #003B70;">Home</a>
+      .footer-bottom p {
+        color: var(--primary-color);
+        font-size: 0.85rem;
+        margin: 0;
+      }
 
-                <div class="dropdown-menu-wrapper" style="position: relative;">
-                  <a href="#" class="menu-link dropdown-trigger" style="color: #003B70;">Quem Somos ▾</a>
-                  <div class="dropdown-menu">
-                    <a href="quem-somos.html" class="dropdown-link">Sobre nós</a>
-                    <a href="historia.html" class="dropdown-link">Nossa história</a>
-                    <a href="diretoria.html" class="dropdown-link">Diretoria</a>
-                    <a href="parceiros.html" class="dropdown-link">Parceiros</a>
+      @media (max-width: 768px) {
+        .parceiros-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+        }
+
+        .page-banner h1 {
+          font-size: 2rem;
+        }
+
+        .site-logo {
+          max-height: 44px;
+        }
+
+        .parceiro-logo {
+          padding: 20px 12px;
+          min-height: 120px;
+        }
+
+        .parceiro-logo img {
+          max-height: 80px;
+        }
+
+        .parceiro-info {
+          padding: 14px;
+        }
+
+        .parceiro-info h3 {
+          font-size: 0.875rem;
+          margin-bottom: 8px;
+        }
+
+        .parceiro-info p {
+          font-size: 0.875rem;
+          line-height: 1.55;
+          margin-bottom: 10px;
+        }
+
+        .parceiro-link {
+          font-size: 0.875rem;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div data-animation="default" class="header w-nav" role="banner">
+      <div class="container">
+        <div class="main-container w-container">
+          <div class="nav-wrapper">
+            <a href="index.html" class="nav-logo w-nav-brand">
+              <img
+                loading="lazy"
+                src="images/logo-asas.png"
+                alt="Asas Familiar"
+                class="site-logo"
+              />
+            </a>
+
+            <nav
+              role="navigation"
+              class="menu-wrapper w-nav-menu"
+              style="
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div class="menu-item-wrapper">
+                <div class="menu-items">
+                  <a href="index.html" class="menu-link"
+                    >Home</a
+                  >
+
+                  <div class="dropdown-menu-wrapper" style="position: relative">
+                    <a
+                      href="#"
+                      class="menu-link dropdown-trigger"
+                     
+                      >Quem Somos ▾</a
+                    >
+                    <div class="dropdown-menu">
+                      <a href="quem-somos.html" class="dropdown-link"
+                        >Sobre nós</a
+                      >
+                      <a href="historia.html" class="dropdown-link"
+                        >Nossa história</a
+                      >
+                      <a href="diretoria.html" class="dropdown-link"
+                        >Diretoria</a
+                      >
+                      <a href="parceiros.html" class="dropdown-link"
+                        >Parceiros</a
+                      >
+                    </div>
                   </div>
-                </div>
 
-                <a href="servicos.html" class="menu-link" style="color: #003B70;">Nossos Serviços</a>
-                <a href="contato.html" class="menu-link" style="color: #003B70;">Contato</a>
+                  <a
+                    href="servicos.html"
+                    class="menu-link"
+                   
+                    >Nossos Serviços</a
+                  >
+                  <a
+                    href="contato.html"
+                    class="menu-link"
+                   
+                    >Contato</a
+                  >
+                </div>
+              </div>
+
+              <div class="nav-button-wrapper">
+                <a
+                  href="https://wa.me/5551980201159"
+                  target="_blank"
+                  class="primary-button w-inline-block"
+                >
+                  Falar com Atendente
+                </a>
+              </div>
+            </nav>
+
+            <div class="nav-trigger w-nav-button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BANNER -->
+    <section class="page-banner">
+      <h1>Nossos Parceiros</h1>
+      <p>
+        "Nossos parceiros ampliam nosso alcance, somando forças para oferecer
+        cuidado humanizado às famílias."
+      </p>
+    </section>
+
+    <!-- LOGO -->
+    <section class="logo-section">
+      <img src="images/logo-asas.png" alt="ASAS Familiar Logo" />
+    </section>
+
+    <!-- INTRO -->
+    <div class="parceiros-intro">
+      <h2>CONHEÇA NOSSOS PARCEIROS</h2>
+      <p>
+        Temos parceiros de profissionais e instituições comprometidas com a
+        excelência, a dignidade e a inovação em assistência familiar e
+        funerária, ampliando nossas ações e prioriza junto às famílias.
+      </p>
+    </div>
+
+    <!-- PARCEIROS GRID -->
+    <section class="parceiros-section">
+      <div class="parceiros-grid">
+        <div class="parceiro-card">
+          <div class="parceiro-logo">
+            <div style="text-align: center; padding: 20px">
+              <div style="font-size: 3rem; font-weight: 800; color: #00a651">
+                POPÓ
+              </div>
+              <div style="font-size: 1.2rem; color: #ffd700; font-weight: 700">
+                FLORICULTURA
+              </div>
+              <div style="font-size: 0.9rem; color: #666">24h do ar</div>
+            </div>
+          </div>
+          <div class="parceiro-info">
+            <h3>POPÓ FLORICULTURA</h3>
+            <p>
+              A Popó Floricultura é parceira da ASAS FAMILIAR oferecendo flores
+              e arranjos que expressam amor, carinho e homenagens aos entes
+              queridos de forma digna e respeitosa às famílias.
+            </p>
+            <a href="#" class="parceiro-link">Saiba mais →</a>
+          </div>
+        </div>
+
+        <div class="parceiro-card">
+          <div class="parceiro-logo">
+            <div style="text-align: center; padding: 30px">
+              <div style="font-size: 2rem; font-weight: 700; color: #2c5f2d">
+                Funerária
+              </div>
+              <div style="font-size: 2.5rem; font-weight: 800; color: #2c5f2d">
+                São Pedro
+              </div>
+              <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 5px">
+                Verdadeiras homenagens
               </div>
             </div>
+          </div>
+          <div class="parceiro-info">
+            <h3>FUNERÁRIA SÃO PEDRO</h3>
+            <p>
+              A funerária São Pedro é parceira da ASAS FAMILIAR oferecendo
+              serviços funerários com excelência, respeito aos sentimentos,
+              desejos e cuidado excepcional às famílias.
+            </p>
+            <a href="#" class="parceiro-link">Saiba mais →</a>
+          </div>
+        </div>
 
-            <div class="nav-button-wrapper">
-              <a href="https://wa.me/5551980201159" target="_blank" class="primary-button w-inline-block">
-                Falar com Atendente
-              </a>
+        <div class="parceiro-card">
+          <div class="parceiro-logo">
+            <div style="text-align: center; padding: 30px">
+              <div style="font-size: 2.5rem; font-weight: 800; color: #8bc34a">
+                ABR<span style="color: #ffd700">A</span>PPS
+              </div>
+              <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 5px">
+                A UNIVERSIDADE DA FELICIDADE !!!
+              </div>
             </div>
-
-          </nav>
-
-          <div class="nav-trigger w-nav-button">
-            <span></span>
-            <span></span>
-            <span></span>
           </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- BANNER -->
-  <section class="page-banner">
-    <h1>Nossos Parceiros</h1>
-    <p>"Nossos parceiros ampliam nosso alcance, somando forças para oferecer cuidado humanizado às famílias."</p>
-  </section>
-
-  <!-- LOGO -->
-  <section class="logo-section">
-    <img src="images/logo-asas.png" alt="ASAS Familiar Logo" />
-  </section>
-
-  <!-- INTRO -->
-  <div class="parceiros-intro">
-    <h2>CONHEÇA NOSSOS PARCEIROS</h2>
-    <p>Temos parceiros de profissionais e instituições comprometidas com a excelência, a dignidade e a inovação em assistência familiar e funerária, ampliando nossas ações e prioriza junto às famílias.</p>
-  </div>
-
-  <!-- PARCEIROS GRID -->
-  <section class="parceiros-section">
-    <div class="parceiros-grid">
-
-      <div class="parceiro-card">
-        <div class="parceiro-logo">
-          <div style="text-align: center; padding: 20px;">
-            <div style="font-size: 3rem; font-weight: 800; color: #00A651;">POPÓ</div>
-            <div style="font-size: 1.2rem; color: #FFD700; font-weight: 700;">FLORICULTURA</div>
-            <div style="font-size: 0.9rem; color: #666;">24h do ar</div>
+          <div class="parceiro-info">
+            <h3>ABRAPPS</h3>
+            <p>
+              A ABRAPPS é parceira da ASAS FAMILIAR, desenvolvendo a capacidade
+              e habilidades de lidar com desigualdades, desenvolvendo assim
+              produção, bem-estar para grupos e comunidades sociais.
+            </p>
+            <a href="#" class="parceiro-link">Saiba mais →</a>
           </div>
         </div>
-        <div class="parceiro-info">
-          <h3>POPÓ FLORICULTURA</h3>
-          <p>A Popó Floricultura é parceira da ASAS FAMILIAR oferecendo flores e arranjos que expressam amor, carinho e homenagens aos entes queridos de forma digna e respeitosa às famílias.</p>
-          <a href="#" class="parceiro-link">Saiba mais →</a>
-        </div>
-      </div>
 
-      <div class="parceiro-card">
-        <div class="parceiro-logo">
-          <div style="text-align: center; padding: 30px;">
-            <div style="font-size: 2rem; font-weight: 700; color: #2C5F2D;">Funerária</div>
-            <div style="font-size: 2.5rem; font-weight: 800; color: #2C5F2D;">São Pedro</div>
-            <div style="font-size: 0.9rem; color: #666; margin-top: 5px;">Verdadeiras homenagens</div>
+        <div class="parceiro-card">
+          <div class="parceiro-logo">
+            <div style="text-align: center; padding: 30px">
+              <div style="font-size: 2.5rem; font-weight: 700; color: #00bcd4">
+                Clinicentro
+              </div>
+              <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 5px">
+                Consultas e Exames Médicos
+              </div>
+            </div>
+          </div>
+          <div class="parceiro-info">
+            <h3>CLINICENTRO</h3>
+            <p>
+              A CLINICENTRO é parceira da ASAS FAMILIAR, oferecendo serviços
+              médicos integrados, democracia, acolhida e atenção em saúde de
+              qualidade, consultas, terapias e civilidade aos associados da
+              ASAS.
+            </p>
+            <a href="#" class="parceiro-link">Saiba mais →</a>
           </div>
         </div>
-        <div class="parceiro-info">
-          <h3>FUNERÁRIA SÃO PEDRO</h3>
-          <p>A funerária São Pedro é parceira da ASAS FAMILIAR oferecendo serviços funerários com excelência, respeito aos sentimentos, desejos e cuidado excepcional às famílias.</p>
-          <a href="#" class="parceiro-link">Saiba mais →</a>
-        </div>
-      </div>
 
-      <div class="parceiro-card">
-        <div class="parceiro-logo">
-          <div style="text-align: center; padding: 30px;">
-            <div style="font-size: 2.5rem; font-weight: 800; color: #8BC34A;">ABR<span style="color: #FFD700;">A</span>PPS</div>
-            <div style="font-size: 0.9rem; color: #666; margin-top: 5px;">A UNIVERSIDADE DA FELICIDADE !!!</div>
+        <div class="parceiro-card">
+          <div class="parceiro-logo">
+            <div style="text-align: center; padding: 30px">
+              <div style="font-size: 1.8rem; font-weight: 700; color: #8b4789">
+                Ribas Carvalho & Leal
+              </div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: #8b4789">
+                ADVOGADOS
+              </div>
+            </div>
+          </div>
+          <div class="parceiro-info">
+            <h3>RCL ADVOGADOS</h3>
+            <p>
+              O RCL Advocacia é parceria da ASAS FAMILIAR oferecendo serviço
+              jurídico dedicado aos profissionais, orientação e soluções
+              jurídicas nos procedimentos burocráticos e cidadania.
+            </p>
+            <a href="#" class="parceiro-link">Saiba mais →</a>
           </div>
         </div>
-        <div class="parceiro-info">
-          <h3>ABRAPPS</h3>
-          <p>A ABRAPPS é parceira da ASAS FAMILIAR, desenvolvendo a capacidade e habilidades de lidar com desigualdades, desenvolvendo assim produção, bem-estar para grupos e comunidades sociais.</p>
-          <a href="#" class="parceiro-link">Saiba mais →</a>
-        </div>
-      </div>
 
-      <div class="parceiro-card">
-        <div class="parceiro-logo">
-          <div style="text-align: center; padding: 30px;">
-            <div style="font-size: 2.5rem; font-weight: 700; color: #00BCD4;">Clinicentro</div>
-            <div style="font-size: 0.9rem; color: #666; margin-top: 5px;">Consultas e Exames Médicos</div>
+        <div class="parceiro-card">
+          <div class="parceiro-logo">
+            <div style="text-align: center; padding: 30px">
+              <div style="font-size: 3rem; font-weight: 800; color: #d32f2f">
+                INPRESO
+              </div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px">
+                instituto de prevenção social
+              </div>
+            </div>
+          </div>
+          <div class="parceiro-info">
+            <h3>INPRESO</h3>
+            <p>
+              O INPRESO é parceiro da ASAS FAMILIAR desenvolvendo serviços
+              relacionados com cursos direcionados, palestras e consultas e
+              prevenção integrar jovens, adultos e idosos em cursos
+              profissionalizantes.
+            </p>
+            <a href="#" class="parceiro-link">Saiba mais →</a>
           </div>
         </div>
-        <div class="parceiro-info">
-          <h3>CLINICENTRO</h3>
-          <p>A CLINICENTRO é parceira da ASAS FAMILIAR, oferecendo serviços médicos integrados, democracia, acolhida e atenção em saúde de qualidade, consultas, terapias e civilidade aos associados da ASAS.</p>
-          <a href="#" class="parceiro-link">Saiba mais →</a>
-        </div>
-      </div>
 
-      <div class="parceiro-card">
-        <div class="parceiro-logo">
-          <div style="text-align: center; padding: 30px;">
-            <div style="font-size: 1.8rem; font-weight: 700; color: #8B4789;">Ribas Carvalho & Leal</div>
-            <div style="font-size: 1.5rem; font-weight: 800; color: #8B4789;">ADVOGADOS</div>
+        <div class="parceiro-card">
+          <div class="parceiro-logo">
+            <div style="text-align: center; padding: 20px">
+              <div
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    #00a651 0%,
+                    #ff6b35 50%,
+                    #ffd700 100%
+                  );
+                  height: 10px;
+                  margin: 10px 0;
+                "
+              ></div>
+              <div style="font-size: 2.5rem; font-weight: 800; color: #00a651">
+                APREFA
+              </div>
+              <div style="font-size: 1.2rem; color: var(--text-muted); font-weight: 600">
+                22 anos
+              </div>
+              <div style="font-size: 0.85rem; color: #666">
+                Prevenção e Assistência Familiar
+              </div>
+              <div
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    #00a651 0%,
+                    #ff6b35 50%,
+                    #ffd700 100%
+                  );
+                  height: 10px;
+                  margin: 10px 0;
+                "
+              ></div>
+            </div>
+          </div>
+          <div class="parceiro-info">
+            <h3>APREFA</h3>
+            <p>
+              A APREFA é parceira da ASAS FAMILIAR, representando um campo de
+              desenvolvimento em cultura previdenciária, disseminando a missão
+              social da prevenção e assistência social aos associados.
+            </p>
+            <a href="#" class="parceiro-link">Saiba mais →</a>
           </div>
         </div>
-        <div class="parceiro-info">
-          <h3>RCL ADVOGADOS</h3>
-          <p>O RCL Advocacia é parceria da ASAS FAMILIAR oferecendo serviço jurídico dedicado aos profissionais, orientação e soluções jurídicas nos procedimentos burocráticos e cidadania.</p>
-          <a href="#" class="parceiro-link">Saiba mais →</a>
-        </div>
-      </div>
 
-      <div class="parceiro-card">
-        <div class="parceiro-logo">
-          <div style="text-align: center; padding: 30px;">
-            <div style="font-size: 3rem; font-weight: 800; color: #D32F2F;">INPRESO</div>
-            <div style="font-size: 0.8rem; color: #666; margin-top: 5px;">instituto de prevenção social</div>
+        <div class="parceiro-card">
+          <div class="parceiro-logo">
+            <div style="text-align: center; padding: 30px; background: #008b8b">
+              <div
+                style="
+                  font-size: 2.5rem;
+                  font-weight: 700;
+                  color: #fff;
+                  font-family: Georgia, serif;
+                "
+              >
+                Camila
+              </div>
+              <div
+                style="
+                  font-size: 1.5rem;
+                  font-weight: 600;
+                  color: #fff;
+                  font-family: Georgia, serif;
+                "
+              >
+                FONSECA
+              </div>
+              <div style="font-size: 0.85rem; color: #fff; margin-top: 5px">
+                TERAPIAS INTEGRATIVAS
+              </div>
+            </div>
+          </div>
+          <div class="parceiro-info">
+            <h3>CAMILA FONSECA</h3>
+            <p>
+              A terapeuta Camila Fonseca da ASAS FAMILIAR desenvolveu serviços
+              terapêuticos, com cursos de cerimonial e facilitação de grupos
+              para promoção de saúde e paz interior aos associados da ASAS.
+            </p>
+            <a href="#" class="parceiro-link">Saiba mais →</a>
           </div>
         </div>
-        <div class="parceiro-info">
-          <h3>INPRESO</h3>
-          <p>O INPRESO é parceiro da ASAS FAMILIAR desenvolvendo serviços relacionados com cursos direcionados, palestras e consultas e prevenção integrar jovens, adultos e idosos em cursos profissionalizantes.</p>
-          <a href="#" class="parceiro-link">Saiba mais →</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer" id="contato">
+      <div class="footer-content footer-flex">
+        <img
+          loading="lazy"
+          src="images/logo-asas.png"
+          alt="Logotipo da ASAS Familiar, representando assistência social e amparo familiar"
+          class="footer-logo"
+        />
+        <div class="footer-text">
+          <p>
+            <strong>ASAS Familiar</strong><br />
+            Associação de Assistência Social e Amparo Familiar.<br />
+            Av. Borges de Medeiros Nº410, Sala 710 / Centro - Porto Alegre -
+            RS<br />
+            Tel: (51) 98020-1159<br />
+            E-mail: contato@asasfamiliar.com.br
+          </p>
         </div>
       </div>
 
-      <div class="parceiro-card">
-        <div class="parceiro-logo">
-          <div style="text-align: center; padding: 20px;">
-            <div style="background: linear-gradient(90deg, #00A651 0%, #FF6B35 50%, #FFD700 100%); height: 10px; margin: 10px 0;"></div>
-            <div style="font-size: 2.5rem; font-weight: 800; color: #00A651;">APREFA</div>
-            <div style="font-size: 1.2rem; color: #666; font-weight: 600;">22 anos</div>
-            <div style="font-size: 0.85rem; color: #666;">Prevenção e Assistência Familiar</div>
-            <div style="background: linear-gradient(90deg, #00A651 0%, #FF6B35 50%, #FFD700 100%); height: 10px; margin: 10px 0;"></div>
-          </div>
-        </div>
-        <div class="parceiro-info">
-          <h3>APREFA</h3>
-          <p>A APREFA é parceira da ASAS FAMILIAR, representando um campo de desenvolvimento em cultura previdenciária, disseminando a missão social da prevenção e assistência social aos associados.</p>
-          <a href="#" class="parceiro-link">Saiba mais →</a>
-        </div>
+      <div class="footer-bottom footer-bottom-small">
+        <p>
+          © 2026 ASAS Familiar. Todos os direitos reservados.
+          <a href="termo-de-uso.html">Termo de Uso</a> |
+          <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        </p>
       </div>
+    </section>
 
-      <div class="parceiro-card">
-        <div class="parceiro-logo">
-          <div style="text-align: center; padding: 30px; background: #008B8B;">
-            <div style="font-size: 2.5rem; font-weight: 700; color: #fff; font-family: Georgia, serif;">Camila</div>
-            <div style="font-size: 1.5rem; font-weight: 600; color: #fff; font-family: Georgia, serif;">FONSECA</div>
-            <div style="font-size: 0.85rem; color: #fff; margin-top: 5px;">TERAPIAS INTEGRATIVAS</div>
-          </div>
-        </div>
-        <div class="parceiro-info">
-          <h3>CAMILA FONSECA</h3>
-          <p>A terapeuta Camila Fonseca da ASAS FAMILIAR desenvolveu serviços terapêuticos, com cursos de cerimonial e facilitação de grupos para promoção de saúde e paz interior aos associados da ASAS.</p>
-          <a href="#" class="parceiro-link">Saiba mais →</a>
-        </div>
-      </div>
+    <!-- DROPDOWN SCRIPT -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Menu Mobile Toggle
+        const navTrigger = document.querySelector(".nav-trigger");
+        const menuWrapper = document.querySelector(".menu-wrapper");
 
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <section class="footer" id="contato">
-    <div class="footer-content footer-flex">
-      <img loading="lazy" src="images/logo-asas.png" alt="Logotipo da ASAS Familiar, representando assistência social e amparo familiar" class="footer-logo" />
-      <div class="footer-text">
-        <p><strong>ASAS Familiar</strong><br>
-        Associação de Assistência Social e Amparo Familiar.<br>
-        Av. Borges de Medeiros Nº410, Sala 710 / Centro - Porto Alegre - RS<br>
-        Tel: (51) 98020-1159<br>
-        E-mail: contato@asasfamiliar.com.br</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom footer-bottom-small">
-      <p>© 2026 ASAS Familiar. Todos os direitos reservados. <a href="termo-de-uso.html">Termo de Uso</a> | <a href="politica-de-privacidade.html">Política de Privacidade</a></p>
-    </div>
-  </section>
-
-  <!-- DROPDOWN SCRIPT -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Menu Mobile Toggle
-      const navTrigger = document.querySelector('.nav-trigger');
-      const menuWrapper = document.querySelector('.menu-wrapper');
-
-      if (navTrigger && menuWrapper) {
-        navTrigger.addEventListener('click', function (e) {
-          e.preventDefault();
-          navTrigger.classList.toggle('active');
-          menuWrapper.classList.toggle('open');
-        });
-
-        // Fechar menu ao clicar em um link
-        const menuLinks = menuWrapper.querySelectorAll('.menu-link:not(.dropdown-trigger), .dropdown-link');
-        menuLinks.forEach(function (link) {
-          link.addEventListener('click', function () {
-            navTrigger.classList.remove('active');
-            menuWrapper.classList.remove('open');
+        if (navTrigger && menuWrapper) {
+          navTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            navTrigger.classList.toggle("active");
+            menuWrapper.classList.toggle("open");
           });
-        });
 
-        // Fechar menu ao clicar fora
-        document.addEventListener('click', function (e) {
-          if (!navTrigger.contains(e.target) && !menuWrapper.contains(e.target)) {
-            navTrigger.classList.remove('active');
-            menuWrapper.classList.remove('open');
-          }
-        });
-      }
+          // Fechar menu ao clicar em um link
+          const menuLinks = menuWrapper.querySelectorAll(
+            ".menu-link:not(.dropdown-trigger), .dropdown-link",
+          );
+          menuLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+              navTrigger.classList.remove("active");
+              menuWrapper.classList.remove("open");
+            });
+          });
 
-      // Dropdown menu em mobile
-      const dropdownTrigger = document.querySelector('.dropdown-trigger');
-      const dropdownMenu = document.querySelector('.dropdown-menu');
+          // Fechar menu ao clicar fora
+          document.addEventListener("click", function (e) {
+            if (
+              !navTrigger.contains(e.target) &&
+              !menuWrapper.contains(e.target)
+            ) {
+              navTrigger.classList.remove("active");
+              menuWrapper.classList.remove("open");
+            }
+          });
+        }
 
-      if (dropdownTrigger && dropdownMenu) {
-        dropdownTrigger.addEventListener('click', function (e) {
-          e.preventDefault();
-          dropdownMenu.classList.toggle('show');
-        });
+        // Dropdown menu em mobile
+        const dropdownTrigger = document.querySelector(".dropdown-trigger");
+        const dropdownMenu = document.querySelector(".dropdown-menu");
 
-        document.addEventListener('click', function (e) {
-          if (!dropdownTrigger.contains(e.target) && !dropdownMenu.contains(e.target)) {
-            dropdownMenu.classList.remove('show');
-          }
-        });
-      }
-    });
-  </script>
+        if (dropdownTrigger && dropdownMenu) {
+          dropdownTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            dropdownMenu.classList.toggle("show");
+          });
 
-</body>
-
+          document.addEventListener("click", function (e) {
+            if (
+              !dropdownTrigger.contains(e.target) &&
+              !dropdownMenu.contains(e.target)
+            ) {
+              dropdownMenu.classList.remove("show");
+            }
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
-

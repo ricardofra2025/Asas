@@ -1,423 +1,531 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contato - ASAS Familiar</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="css/site-shared.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/variables.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/typography.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/padrao-historia.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/responsive-overrides.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <title>Contato - ASAS Familiar</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link href="css/site-shared.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/variables.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/typography.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/padrao-historia.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/responsive-overrides.css?v=20260226" rel="stylesheet" type="text/css" />
+    <link
+      href="images/favicon.png?v=1"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      href="images/favicon.png?v=1"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link href="images/favicon.png?v=1" rel="shortcut icon" type="image/png" />
 
-  <link href="images/favicon.png?v=1" rel="icon" type="image/png" sizes="32x32" />
-  <link href="images/favicon.png?v=1" rel="apple-touch-icon" sizes="180x180" />
-  <link href="images/favicon.png?v=1" rel="shortcut icon" type="image/png" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
+      .header .menu-link:hover,
+      .header .menu-link:active,
+      .header .menu-link:focus,
+      .header .dropdown-trigger:hover,
+      .header .dropdown-trigger:active,
+      .header .dropdown-trigger:focus,
+      .header .dropdown-menu-wrapper > a:hover,
+      .header .dropdown-menu-wrapper > a:active,
+      .header .dropdown-menu-wrapper > a:focus,
+      .header .nav-logo:hover,
+      .header .nav-logo:active,
+      .header .nav-logo:focus,
+      .header .w-nav-brand:hover,
+      .header .w-nav-brand:active,
+      .header .w-nav-brand:focus {
+        background: transparent !important;
+        background-color: transparent !important;
+      }
 
-    .header .menu-link:hover,
-    .header .menu-link:active,
-    .header .menu-link:focus,
-    .header .dropdown-trigger:hover,
-    .header .dropdown-trigger:active,
-    .header .dropdown-trigger:focus,
-    .header .dropdown-menu-wrapper>a:hover,
-    .header .dropdown-menu-wrapper>a:active,
-    .header .dropdown-menu-wrapper>a:focus,
-    .header .nav-logo:hover,
-    .header .nav-logo:active,
-    .header .nav-logo:focus,
-    .header .w-nav-brand:hover,
-    .header .w-nav-brand:active,
-    .header .w-nav-brand:focus {
-      background: transparent !important;
-      background-color: transparent !important;
-    }
-
-    .contato-hero {
-      max-width: 1100px;
-      margin: 40px auto 0;
-      padding: 0 16px;
-      display: grid;
-      grid-template-columns: 360px 1fr;
-      gap: 0;
-      align-items: stretch;
-    }
-
-    .contato-hero-left {
-      background: #003B70;
-      color: #fff;
-      padding: 42px 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .contato-hero-left h1 {
-      color: #fff;
-      margin: 0 0 16px;
-      font-size: 2rem;
-    }
-
-    .contato-hero-left p {
-      margin: 0;
-      line-height: 1.75;
-      font-size: 1rem;
-      color: #e9f0ff;
-    }
-
-    .contato-hero-right {
-      min-height: 380px;
-      background: #f2f4f8;
-      overflow: hidden;
-    }
-
-    .contato-hero-right img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .contato-main {
-      max-width: 1100px;
-      margin: 36px auto 0;
-      padding: 0 16px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 26px;
-    }
-
-    .form-card,
-    .info-card {
-      background: #fff;
-      border: 1px solid #e4e8f0;
-      border-radius: 12px;
-      padding: 24px;
-    }
-
-    .form-card h2,
-    .info-card h2 {
-      margin: 0 0 16px;
-      color: #003B70;
-      font-size: 1.3rem;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .form-grid .full {
-      grid-column: 1 / -1;
-    }
-
-    .form-card input,
-    .form-card textarea {
-      width: 100%;
-      box-sizing: border-box;
-      border: 1px solid #d5dbe8;
-      border-radius: 6px;
-      padding: 10px 12px;
-      font-size: 14px;
-      font-family: inherit;
-      color: #233;
-      background: #fff;
-    }
-
-    .form-card textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .form-card button {
-      width: 100%;
-      border: 0;
-      border-radius: 6px;
-      background: #e74c3c;
-      color: #fff;
-      font-weight: 600;
-      padding: 12px 16px;
-      cursor: pointer;
-    }
-
-    .info-item {
-      border: 1px solid #e4e8f0;
-      border-radius: 8px;
-      padding: 12px 14px;
-      margin-bottom: 12px;
-      background: #f9fbff;
-    }
-
-    .info-item strong {
-      color: #003B70;
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .info-item span {
-      color: #334;
-      line-height: 1.5;
-      font-size: 14px;
-      display: block;
-    }
-
-    .mapa-wrap {
-      max-width: 1100px;
-      margin: 26px auto 0;
-      padding: 0 16px;
-    }
-
-    .mapa-wrap iframe {
-      width: 100%;
-      height: 260px;
-      border: 0;
-      border-radius: 12px;
-      display: block;
-    }
-
-    .cta-contato {
-      max-width: 1100px;
-      margin: 24px auto 46px;
-      padding: 0 16px;
-    }
-
-    .cta-contato-box {
-      background: #003B70;
-      border: 1px solid #0f4c86;
-      color: #fff;
-      border-radius: 10px;
-      padding: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
-
-    .cta-contato-box p {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    .cta-contato-box a {
-      background: #e74c3c;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      padding: 10px 16px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    @media (max-width: 900px) {
       .contato-hero {
-        grid-template-columns: 1fr;
-      }
-
-      .contato-main {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-contato-box {
-        flex-direction: column;
+        max-width: 1100px;
+        margin: 40px auto 0;
+        padding: 0 16px;
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        gap: 0;
         align-items: stretch;
       }
 
-      .cta-contato-box a {
-        text-align: center;
+      .contato-hero-left {
+        background: var(--primary-color);
+        color: #fff;
+        padding: 42px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
-    }
 
-    @media (max-width: 640px) {
+      .contato-hero-left h1 {
+        color: #fff;
+        margin: 0 0 16px;
+        font-size: 2.25rem;
+      }
+
+      .contato-hero-left p {
+        margin: 0;
+        line-height: 1.75;
+        font-size: 1rem;
+        color: #e9f0ff;
+      }
+
+      .contato-hero-right {
+        min-height: 380px;
+        background: #f2f4f8;
+        overflow: hidden;
+      }
+
+      .contato-hero-right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .contato-main {
+        max-width: 1100px;
+        margin: 36px auto 0;
+        padding: 0 16px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 26px;
+      }
+
+      .form-card,
+      .info-card {
+        background: #fff;
+        border: 1px solid #e4e8f0;
+        border-radius: 12px;
+        padding: 24px;
+      }
+
+      .form-card h2,
+      .info-card h2 {
+        margin: 0 0 16px;
+        color: var(--primary-color);
+        font-size: 1.25rem;
+      }
+
       .form-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <div data-animation="default" class="header w-nav" role="banner">
-    <div class="container">
-      <div class="main-container w-container">
-        <div class="nav-wrapper">
+      .form-grid .full {
+        grid-column: 1 / -1;
+      }
 
-          <a href="index.html" class="nav-logo w-nav-brand">
-            <img loading="lazy" src="images/logo-asas.png" alt="Asas Familiar" class="site-logo" />
-          </a>
+      .form-card input,
+      .form-card textarea {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #d5dbe8;
+        border-radius: 6px;
+        padding: 10px 12px;
+        font-size: 0.875rem;
+        font-family: inherit;
+        color: #233;
+        background: #fff;
+      }
 
-          <nav role="navigation" class="menu-wrapper w-nav-menu"
-            style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
+      .form-card textarea {
+        min-height: 130px;
+        resize: vertical;
+      }
 
-            <div class="menu-item-wrapper">
-              <div class="menu-items">
-                <a href="index.html" class="menu-link" style="color: #003B70;">Home</a>
+      .form-card button {
+        width: 100%;
+        border: 0;
+        border-radius: 6px;
+        background: var(--secondary-color);
+        color: #fff;
+        font-weight: 600;
+        padding: 12px 16px;
+        cursor: pointer;
+      }
 
-                <div class="dropdown-menu-wrapper" style="position: relative;">
-                  <a href="#" class="menu-link dropdown-trigger" style="color: #003B70;">Quem Somos ▾</a>
-                  <div class="dropdown-menu">
-                    <a href="quem-somos.html" class="dropdown-link">Sobre nós</a>
-                    <a href="historia.html" class="dropdown-link">Nossa história</a>
-                    <a href="diretoria.html" class="dropdown-link">Diretoria</a>
-                    <a href="parceiros.html" class="dropdown-link">Parceiros</a>
+      .info-item {
+        border: 1px solid #e4e8f0;
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin-bottom: 12px;
+        background: #f9fbff;
+      }
+
+      .info-item strong {
+        color: var(--primary-color);
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .info-item span {
+        color: #334;
+        line-height: 1.5;
+        font-size: 0.875rem;
+        display: block;
+      }
+
+      .mapa-wrap {
+        max-width: 1100px;
+        margin: 26px auto 0;
+        padding: 0 16px;
+      }
+
+      .mapa-wrap iframe {
+        width: 100%;
+        height: 260px;
+        border: 0;
+        border-radius: 12px;
+        display: block;
+      }
+
+      .cta-contato {
+        max-width: 1100px;
+        margin: 24px auto 46px;
+        padding: 0 16px;
+      }
+
+      .cta-contato-box {
+        background: var(--primary-color);
+        border: 1px solid var(--primary-light);
+        color: #fff;
+        border-radius: 10px;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+      }
+
+      .cta-contato-box p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .cta-contato-box a {
+        background: var(--secondary-color);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        padding: 10px 16px;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 900px) {
+        .contato-hero {
+          grid-template-columns: 1fr;
+        }
+
+        .contato-main {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-contato-box {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .cta-contato-box a {
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div data-animation="default" class="header w-nav" role="banner">
+      <div class="container">
+        <div class="main-container w-container">
+          <div class="nav-wrapper">
+            <a href="index.html" class="nav-logo w-nav-brand">
+              <img
+                loading="lazy"
+                src="images/logo-asas.png"
+                alt="Asas Familiar"
+                class="site-logo"
+              />
+            </a>
+
+            <nav
+              role="navigation"
+              class="menu-wrapper w-nav-menu"
+              style="
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div class="menu-item-wrapper">
+                <div class="menu-items">
+                  <a href="index.html" class="menu-link"
+                    >Home</a
+                  >
+
+                  <div class="dropdown-menu-wrapper" style="position: relative">
+                    <a
+                      href="#"
+                      class="menu-link dropdown-trigger"
+                     
+                      >Quem Somos ▾</a
+                    >
+                    <div class="dropdown-menu">
+                      <a href="quem-somos.html" class="dropdown-link"
+                        >Sobre nós</a
+                      >
+                      <a href="historia.html" class="dropdown-link"
+                        >Nossa história</a
+                      >
+                      <a href="diretoria.html" class="dropdown-link"
+                        >Diretoria</a
+                      >
+                      <a href="parceiros.html" class="dropdown-link"
+                        >Parceiros</a
+                      >
+                    </div>
                   </div>
+
+                  <a
+                    href="servicos.html"
+                    class="menu-link"
+                   
+                    >Nossos Serviços</a
+                  >
+                  <a
+                    href="contato.html"
+                    class="menu-link"
+                   
+                    >Contato</a
+                  >
                 </div>
-
-                <a href="servicos.html" class="menu-link" style="color: #003B70;">Nossos Serviços</a>
-                <a href="contato.html" class="menu-link" style="color: #003B70;">Contato</a>
               </div>
+
+              <div class="nav-button-wrapper">
+                <a
+                  href="https://wa.me/5551980201159"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="primary-button w-inline-block"
+                >
+                  Falar com Atendente
+                </a>
+              </div>
+            </nav>
+
+            <div class="nav-trigger w-nav-button">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-
-            <div class="nav-button-wrapper">
-              <a href="https://wa.me/5551980201159" target="_blank" rel="noopener noreferrer"
-                class="primary-button w-inline-block">
-                Falar com Atendente
-              </a>
-            </div>
-
-          </nav>
-
-          <div class="nav-trigger w-nav-button">
-            <span></span>
-            <span></span>
-            <span></span>
           </div>
-
         </div>
       </div>
     </div>
-  </div>
 
-  <section class="contato-hero">
-    <div class="contato-hero-left">
-      <h1>Contato</h1>
-      <p>Estamos sempre prontos para ouvir você. Entre em contato com a ASAS Familiar e receba apoio humanizado, orientação segura e atendimento imediato em cada necessidade.</p>
-    </div>
-    <div class="contato-hero-right">
-      <img src="images/12.png" alt="Atendimento via WhatsApp ASAS Familiar" />
-    </div>
-  </section>
+    <section class="contato-hero">
+      <div class="contato-hero-left">
+        <h1>Contato</h1>
+        <p>
+          Estamos sempre prontos para ouvir você. Entre em contato com a ASAS
+          Familiar e receba apoio humanizado, orientação segura e atendimento
+          imediato em cada necessidade.
+        </p>
+      </div>
+      <div class="contato-hero-right">
+        <img src="images/12.png" alt="Atendimento via WhatsApp ASAS Familiar" />
+      </div>
+    </section>
 
-  <section class="contato-main">
-    <div class="form-card">
-      <h2>Estamos aqui para ajudar</h2>
-      <form>
-        <div class="form-grid">
-          <input type="text" placeholder="Primeiro nome" aria-label="Primeiro nome" />
-          <input type="text" placeholder="Sobrenome" aria-label="Sobrenome" />
-          <input type="email" placeholder="E-mail" aria-label="E-mail" />
-          <input type="tel" placeholder="Telefone" aria-label="Telefone" />
-          <textarea class="full" placeholder="Como podemos ajudar?" aria-label="Mensagem"></textarea>
-          <button type="button" class="full">Enviar Mensagem</button>
+    <section class="contato-main">
+      <div class="form-card">
+        <h2>Estamos aqui para ajudar</h2>
+        <form>
+          <div class="form-grid">
+            <input
+              type="text"
+              placeholder="Primeiro nome"
+              aria-label="Primeiro nome"
+            />
+            <input type="text" placeholder="Sobrenome" aria-label="Sobrenome" />
+            <input type="email" placeholder="E-mail" aria-label="E-mail" />
+            <input type="tel" placeholder="Telefone" aria-label="Telefone" />
+            <textarea
+              class="full"
+              placeholder="Como podemos ajudar?"
+              aria-label="Mensagem"
+            ></textarea>
+            <button type="button" class="full">Enviar Mensagem</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="info-card">
+        <h2>Informações de contato</h2>
+        <div class="info-item">
+          <strong>Endereço</strong>
+          <span
+            >Av. Borges de Medeiros Nº410, Sala 710 / Centro - Porto Alegre -
+            RS</span
+          >
         </div>
-      </form>
-    </div>
-
-    <div class="info-card">
-      <h2>Informações de contato</h2>
-      <div class="info-item">
-        <strong>Endereço</strong>
-        <span>Av. Borges de Medeiros Nº410, Sala 710 / Centro - Porto Alegre - RS</span>
+        <div class="info-item">
+          <strong>Telefone</strong>
+          <span>(51) 98020-1159</span>
+        </div>
+        <div class="info-item">
+          <strong>E-mail</strong>
+          <span>contato@asasfamiliar.com.br</span>
+        </div>
+        <div class="info-item">
+          <strong>Atendimento</strong>
+          <span>Segunda a sábado, com suporte imediato para urgências.</span>
+        </div>
       </div>
-      <div class="info-item">
-        <strong>Telefone</strong>
-        <span>(51) 98020-1159</span>
+    </section>
+
+    <section class="mapa-wrap">
+      <iframe
+        title="Mapa ASAS Familiar"
+        src="https://www.google.com/maps?q=Av.+Borges+de+Medeiros+410,+Porto+Alegre&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <section class="cta-contato">
+      <div class="cta-contato-box">
+        <p>
+          Procurando um atendimento humanizado que valoriza e respeita a sua
+          dignidade?
+        </p>
+        <a
+          href="https://wa.me/5551980201159"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Falar com Especialista</a
+        >
       </div>
-      <div class="info-item">
-        <strong>E-mail</strong>
-        <span>contato@asasfamiliar.com.br</span>
+    </section>
+
+    <section class="footer" id="contato">
+      <div class="footer-content footer-flex">
+        <img
+          loading="lazy"
+          src="images/logo-asas.png"
+          alt="Logotipo da ASAS Familiar, representando assistência social e amparo familiar"
+          class="footer-logo"
+        />
+        <div class="footer-text">
+          <p>
+            <strong>ASAS Familiar</strong><br />
+            Associação de Assistência Social e Amparo Familiar.<br />
+            Av. Borges de Medeiros Nº410, Sala 710 / Centro - Porto Alegre -
+            RS<br />
+            Tel: (51) 98020-1159<br />
+            E-mail: contato@asasfamiliar.com.br
+          </p>
+        </div>
       </div>
-      <div class="info-item">
-        <strong>Atendimento</strong>
-        <span>Segunda a sábado, com suporte imediato para urgências.</span>
+      <div class="footer-bottom footer-bottom-small">
+        <p>
+          © 2026 ASAS Familiar. Todos os direitos reservados.
+          <a href="termo-de-uso.html">Termo de Uso</a> |
+          <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="mapa-wrap">
-    <iframe title="Mapa ASAS Familiar"
-      src="https://www.google.com/maps?q=Av.+Borges+de+Medeiros+410,+Porto+Alegre&output=embed"
-      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </section>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var navTrigger = document.querySelector(".nav-trigger");
+        var menuWrapper = document.querySelector(".menu-wrapper");
 
-  <section class="cta-contato">
-    <div class="cta-contato-box">
-      <p>Procurando um atendimento humanizado que valoriza e respeita a sua dignidade?</p>
-      <a href="https://wa.me/5551980201159" target="_blank" rel="noopener noreferrer">Falar com Especialista</a>
-    </div>
-  </section>
-
-  <section class="footer" id="contato">
-    <div class="footer-content footer-flex">
-      <img loading="lazy" src="images/logo-asas.png" alt="Logotipo da ASAS Familiar, representando assistência social e amparo familiar" class="footer-logo" />
-      <div class="footer-text">
-        <p><strong>ASAS Familiar</strong><br>
-        Associação de Assistência Social e Amparo Familiar.<br>
-        Av. Borges de Medeiros Nº410, Sala 710 / Centro - Porto Alegre - RS<br>
-        Tel: (51) 98020-1159<br>
-        E-mail: contato@asasfamiliar.com.br</p>
-      </div>
-    </div>
-    <div class="footer-bottom footer-bottom-small">
-      <p>© 2026 ASAS Familiar. Todos os direitos reservados. <a href="termo-de-uso.html">Termo de Uso</a> | <a href="politica-de-privacidade.html">Política de Privacidade</a></p>
-    </div>
-  </section>
-
-  <script src="js/jquery.js" type="text/javascript"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var navTrigger = document.querySelector('.nav-trigger');
-      var menuWrapper = document.querySelector('.menu-wrapper');
-
-      if (navTrigger && menuWrapper) {
-        navTrigger.addEventListener('click', function (e) {
-          e.preventDefault();
-          navTrigger.classList.toggle('active');
-          menuWrapper.classList.toggle('open');
-        });
-
-        var menuLinks = menuWrapper.querySelectorAll('.menu-link:not(.dropdown-trigger), .dropdown-link');
-        menuLinks.forEach(function (link) {
-          link.addEventListener('click', function () {
-            navTrigger.classList.remove('active');
-            menuWrapper.classList.remove('open');
+        if (navTrigger && menuWrapper) {
+          navTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            navTrigger.classList.toggle("active");
+            menuWrapper.classList.toggle("open");
           });
-        });
 
-        document.addEventListener('click', function (e) {
-          if (!navTrigger.contains(e.target) && !menuWrapper.contains(e.target)) {
-            navTrigger.classList.remove('active');
-            menuWrapper.classList.remove('open');
+          var menuLinks = menuWrapper.querySelectorAll(
+            ".menu-link:not(.dropdown-trigger), .dropdown-link",
+          );
+          menuLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+              navTrigger.classList.remove("active");
+              menuWrapper.classList.remove("open");
+            });
+          });
+
+          document.addEventListener("click", function (e) {
+            if (
+              !navTrigger.contains(e.target) &&
+              !menuWrapper.contains(e.target)
+            ) {
+              navTrigger.classList.remove("active");
+              menuWrapper.classList.remove("open");
+            }
+          });
+        }
+
+        var dropdownTrigger = document.querySelector(".dropdown-trigger");
+        var dropdownMenu = document.querySelector(".dropdown-menu");
+        var dropdownWrapper = document.querySelector(".dropdown-menu-wrapper");
+
+        if (dropdownTrigger) {
+          dropdownTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            dropdownMenu.classList.toggle("show");
+          });
+        }
+
+        document.addEventListener("click", function (e) {
+          if (dropdownWrapper && !dropdownWrapper.contains(e.target)) {
+            dropdownMenu.classList.remove("show");
           }
         });
-      }
-
-      var dropdownTrigger = document.querySelector('.dropdown-trigger');
-      var dropdownMenu = document.querySelector('.dropdown-menu');
-      var dropdownWrapper = document.querySelector('.dropdown-menu-wrapper');
-
-      if (dropdownTrigger) {
-        dropdownTrigger.addEventListener('click', function (e) {
-          e.preventDefault();
-          dropdownMenu.classList.toggle('show');
-        });
-      }
-
-      document.addEventListener('click', function (e) {
-        if (dropdownWrapper && !dropdownWrapper.contains(e.target)) {
-          dropdownMenu.classList.remove('show');
-        }
       });
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

@@ -1,38 +1,66 @@
 /* variables.css - Identidade Visual ASAS Familiar */
 
 :root {
-    /* Cores principais do projeto */
-    --primary-color: #063e71;
-    --secondary-color: #e74c3c;
-    --accent-color: #e74c3c;
-    --background-color: #f5f5f5;
-    --text-color: #333333;
+  /* ---- Paleta de Cores da Marca ---- */
+  --primary-color: #003b70; /* azul principal */
+  --primary-dark: #0d2236; /* azul muito escuro — gradiente hero */
+  --primary-light: #004b85; /* azul médio — gradientes, hover */
+  --secondary-color: #e74c3c; /* vermelho — destaques, CTAs */
+  --secondary-dark: #c0392b; /* vermelho escuro — hover botões */
+  --accent-color: #e74c3c;
+  --background-color: #f5f5f5; /* fundo geral */
+  --background-alt: #efefef; /* fundo de seções alternadas */
+  --color-white: #ffffff;
+  --text-color: #333333; /* texto principal */
+  --text-secondary: #444444; /* parágrafos de conteúdo */
+  --text-muted: #666666; /* subtítulos, legendas */
+  --border-color: #e5e5e5; /* bordas de cartões, dropdowns */
+  --border-light: #d0d0d0; /* divisores leves */
 
-    /* Fontes */
-    --main-font: 'IBM Plex Sans', Arial, sans-serif;
-    --heading-font: 'IBM Plex Serif', Arial, serif;
+  /* Fontes */
+  --font-sans: "IBM Plex Sans", Arial, sans-serif;
+  --main-font: var(--font-sans);
+  --heading-font: var(--font-sans);
+
+  /* ---- Escala Tipográfica ---- */
+  /* Tamanhos fixos */
+  --fs-xs: 0.75rem; /* 12px — copyright, captions */
+  --fs-sm: 0.875rem; /* 14px — footer, labels, inputs */
+  --fs-base: 1rem; /* 16px — corpo do texto */
+  --fs-md: 1.125rem; /* 18px — lead, parágrafo destaque */
+  --fs-lg: 1.25rem; /* 20px — menu, subtítulos */
+  --fs-xl: 1.5rem; /* 24px — h4, títulos de cards */
+  --fs-2xl: 1.875rem; /* 30px — h3, subseções */
+  --fs-3xl: 2.25rem; /* 36px — h2, seções */
+  --fs-4xl: 3rem; /* 48px — h1, banners */
+
+  /* Tamanhos responsivos para títulos */
+  --fs-h1: clamp(2rem, 5.5vw, 3rem);
+  --fs-h2: clamp(1.5rem, 4vw, 2.25rem);
+  --fs-h3: clamp(1.25rem, 3vw, 1.875rem);
+  --fs-h4: clamp(1.125rem, 2.5vw, 1.5rem);
+  --fs-lead: clamp(1rem, 2.4vw, 1.125rem);
 }
 
 /* Ajuste visual do logo Asas */
 .logo-asas {
-    max-width: 180px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    padding: 8px 0;
-}
-/* Aplicação Global */
-body {
-    font-family: var(--main-font);
-    color: var(--text-color);
-    background-color: var(--background-color);
-    margin: 0;
-    padding: 0;
+  max-width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 8px 0;
 }
 
-/* Títulos Forçados para Azul da Marca */
-h1,
-/* Títulos principais */
+/* Aplicação Global */
+body {
+  font-family: var(--font-sans);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Títulos — cor da marca */
 h1,
 h2,
 h3,
@@ -42,77 +70,77 @@ h6,
 .heading-h1,
 .heading-h2,
 .heading-h3 {
-    font-family: var(--main-font);
-    color: var(--primary-color);
-    font-weight: 700;
+  font-family: var(--font-sans);
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
 /* Destaques de texto em Vermelho */
 .text-span,
 .text-span-2 {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 /* --- Botões Padronizados --- */
 .primary-button,
 .secondary-button,
 .secondary-button-white {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: #ffffff;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #ffffff;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 /* Efeito ao passar o mouse (Hover) */
 .primary-button:hover,
 .secondary-button:hover,
 .secondary-button-white:hover {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 /* --- Menu e Links --- */
 .menu-link.w--current,
 .nav-link:hover,
 .dropdown-link:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .dropdown-icon {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* --- Rodapé --- */
 .footer {
-    background-color: var(--background-light);
-    border-top: 1px solid #e0e0e0;
-    padding: 16px 0;
+  background-color: var(--background-light);
+  border-top: 1px solid #e0e0e0;
+  padding: 16px 0;
 }
 
 .footer p,
 .footer a {
-    color: var(--primary-color);
-    font-size: 14px;
+  color: var(--primary-color);
+  font-size: var(--fs-sm);
 }
 
 .footer-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 }
 .footer-logo {
-    max-width: 120px;
-    height: auto;
+  max-width: 120px;
+  height: auto;
 }
 .footer-text {
-    text-align: left;
-    font-size: 15px;
-    color: var(--primary-color);
+  text-align: left;
+  font-size: var(--fs-sm);
+  color: var(--primary-color);
 }
 .footer-bottom-small {
-    padding: 8px 0 0 0;
-    font-size: 12px;
-    text-align: center;
+  padding: 8px 0 0 0;
+  font-size: var(--fs-xs);
+  text-align: center;
 }

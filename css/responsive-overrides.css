@@ -1,7 +1,7 @@
 /* Overrides responsivos globais para todas as telas */
 
-:root {
-  --theme--color-01: #003b70;
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -58,12 +58,12 @@ iframe {
 }
 
 .page-banner h1 {
-  font-size: clamp(1.8rem, 5.5vw, 3rem) !important;
+  font-size: var(--fs-h1) !important; /* clamp(2rem, 5.5vw, 3rem) */
   line-height: 1.2;
 }
 
 .page-banner p {
-  font-size: clamp(0.95rem, 2.6vw, 1.2rem) !important;
+  font-size: var(--fs-lead) !important; /* clamp(1rem, 2.4vw, 1.125rem) */
   line-height: 1.6;
 }
 
@@ -87,7 +87,7 @@ iframe {
 .policy-section li,
 .terms-section li {
   text-align: left !important;
-  font-size: clamp(0.95rem, 2.4vw, 1.08rem) !important;
+  font-size: var(--fs-lead) !important; /* clamp(1rem, 2.4vw, 1.125rem) */
   line-height: 1.75;
 }
 
@@ -102,9 +102,9 @@ iframe {
 
 /* === FOOTER GLOBAL === */
 .footer {
-  background-color: #f5f5f5 !important;
+  background-color: var(--background-color) !important;
   padding: 30px 20px 20px !important;
-  color: #003B70 !important;
+  color: var(--primary-color) !important;
 }
 
 .footer-content,
@@ -129,14 +129,14 @@ iframe {
 .footer-text,
 .footer-info {
   text-align: center !important;
-  color: #003B70 !important;
+  color: var(--primary-color) !important;
 }
 
 .footer-text p,
 .footer-info p {
-  color: #003B70 !important;
+  color: var(--primary-color) !important;
   margin: 4px 0 !important;
-  font-size: 0.95rem !important;
+  font-size: var(--fs-sm) !important; /* 0.875rem */
   line-height: 1.6 !important;
   text-align: center !important;
 }
@@ -150,19 +150,30 @@ iframe {
   max-width: 800px !important;
   margin: 15px auto 0 !important;
   padding-top: 15px !important;
-  border-top: 1px solid #d0d0d0 !important;
+  border-top: 1px solid var(--border-light) !important;
   text-align: center !important;
   justify-content: center !important;
   align-items: center !important;
 }
 
 .footer-bottom p {
-  color: #003B70 !important;
-  font-size: 0.85rem !important;
+  color: var(--primary-color) !important;
+  font-size: var(--fs-xs) !important; /* 0.75rem */
   margin: 0 !important;
   line-height: 1.55 !important;
   text-align: center !important;
   width: 100% !important;
+}
+
+.footer-bottom a {
+  color: var(--primary-color) !important;
+  text-decoration: underline !important;
+  transition: color 0.2s !important;
+}
+
+.footer-bottom a:hover,
+.footer-bottom a:focus-visible {
+  color: var(--secondary-color) !important;
 }
 
 .parceiros-grid {
@@ -213,7 +224,7 @@ iframe {
   }
 
   .diretor-nome {
-    font-size: clamp(1.3rem, 5vw, 1.7rem) !important;
+    font-size: var(--fs-h3) !important; /* clamp(1.25rem, 3vw, 1.875rem) */
   }
 }
 
@@ -247,13 +258,21 @@ iframe {
 
 @media (max-width: 390px) {
   .hero-mobile-banner {
-    border-radius: 20px !important;
+    border-radius: 0 !important;
   }
 }
 
 .servicos-carousel-container {
-  padding: 0 clamp(12px, 4vw, 40px) !important;
+  /* Padding horizontal acomoda os botões nas laterais */
+  padding: 0 clamp(60px, 7vw, 80px) !important;
   margin: clamp(30px, 6vw, 60px) auto 0 !important;
+}
+
+/* Em mobile os botões ficam abaixo — padding lateral mínimo */
+@media (max-width: 640px) {
+  .servicos-carousel-container {
+    padding: 0 16px !important;
+  }
 }
 
 .swiper-button-prev,
@@ -268,7 +287,8 @@ iframe {
 }
 
 .pilares-section {
-  padding: 0 16px clamp(44px, 8vw, 80px) !important;
+  /* Mesmo ritmo vertical das demais seções */
+  padding: clamp(44px, 7vw, 80px) 16px !important;
 }
 
 @media (max-width: 768px) {
@@ -324,6 +344,14 @@ iframe {
   }
 }
 
+/* Touch target mínimo WCAG 2.5.5 — 44x44px */
+.nav-trigger {
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Home - seção Depoimentos */
 @media (max-width: 768px) {
   section.testimonial .testimonial-content-wrapper {
@@ -340,7 +368,7 @@ iframe {
   }
 
   section.testimonial .title._335 .heading-h2 {
-    font-size: clamp(1.8rem, 7vw, 2.4rem);
+    font-size: var(--fs-h2); /* clamp(1.5rem, 4vw, 2.25rem) */
     text-align: center;
   }
 
@@ -372,7 +400,7 @@ iframe {
 
 /* Home - seção Sobre */
 #sobre.why-choose {
-  background-color: #efefef;
+  background-color: var(--background-alt);
   padding: clamp(44px, 7vw, 88px) 0 !important;
 }
 
@@ -398,14 +426,14 @@ iframe {
 
 #sobre .heading-h2 {
   margin: 0;
-  font-size: clamp(2.1rem, 4.2vw, 3.6rem);
+  font-size: clamp(2rem, 4.2vw, 3rem);
   line-height: 1.1;
 }
 
 #sobre .subtitle {
   margin: 0;
   opacity: 1;
-  color: #666563;
+  color: var(--text-muted);
   max-width: 540px;
   font-size: 1rem;
   line-height: 1.45;
@@ -417,7 +445,7 @@ iframe {
 
 #sobre .service-details-content p {
   margin: 0 0 8px;
-  color: #1f1f1f;
+  color: var(--text-color);
   font-size: 1rem;
   line-height: 1.55;
 }
@@ -426,7 +454,7 @@ iframe {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
-  background-color: #003b70 !important;
+  background-color: var(--primary-color) !important;
   color: #fff !important;
   border-radius: 999px;
   padding: 12px 24px !important;
@@ -438,7 +466,7 @@ iframe {
 }
 
 #sobre .secondary-button:hover {
-  background-color: #e74c3c !important;
+  background-color: var(--secondary-color) !important;
 }
 
 #sobre .why-choose-image {
@@ -475,12 +503,12 @@ iframe {
   }
 
   #sobre .heading-h2 {
-    font-size: clamp(1.8rem, 7vw, 2.4rem);
+    font-size: var(--fs-h2); /* clamp(1.5rem, 4vw, 2.25rem) */
   }
 
   #sobre .subtitle {
     font-size: 1rem;
-    color: #555;
+    color: var(--text-muted);
   }
 
   #sobre .service-details-content p {

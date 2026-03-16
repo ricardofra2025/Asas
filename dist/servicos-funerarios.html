@@ -1,84 +1,323 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="pt-br">
-<head>
-  <meta charset="utf-8" />
-  <title>Serviços Funerários - ASAS Familiar</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link href="css/site-shared.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/variables.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/typography.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/padrao-historia.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/responsive-overrides.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="images/favicon.png?v=1" rel="icon" type="image/png" sizes="32x32" />
-  <style>
-    body { margin: 0; padding: 0; }
-    .header .menu-link:hover,
-    .header .menu-link:active,
-    .header .menu-link:focus,
-    .header .dropdown-trigger:hover,
-    .header .dropdown-trigger:active,
-    .header .dropdown-trigger:focus,
-    .header .dropdown-menu-wrapper > a:hover,
-    .header .dropdown-menu-wrapper > a:active,
-    .header .dropdown-menu-wrapper > a:focus,
-    .header .nav-logo:hover,
-    .header .nav-logo:active,
-    .header .nav-logo:focus,
-    .header .w-nav-brand:hover,
-    .header .w-nav-brand:active,
-    .header .w-nav-brand:focus,
-    .footer a:hover,
-    .footer a:active,
-    .footer a:focus,
-    .footer a:focus-visible {
-      background: transparent !important;
-      background-color: transparent !important;
-      outline: none !important;
-      box-shadow: none !important;
-    }
-    .page-banner { background: linear-gradient(135deg, #003B70 0%, #004b85 100%); padding: 80px 20px; text-align: center; color: #fff; }
-    .page-banner h1 { font-size: 3rem; margin: 0 0 20px 0; color: #fff; }
-    .page-banner p { font-size: 1.15rem; max-width: 900px; margin: 0 auto; line-height: 1.7; }
-    .servico-section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; }
-    .servico-logo-wrapper { text-align: center; margin-bottom: 24px; }
-    .servico-logo { max-width: 96px; width: 100%; height: auto; }
-    .servico-title { color: #003B70; font-size: 1.8rem; font-weight: 700; margin: 0 0 24px 0; text-transform: uppercase; letter-spacing: 1px; text-align: center; }
-    .servico-content p { font-size: 1.08rem; line-height: 1.8; color: #444; margin-bottom: 20px; text-align: justify; }
-    @media (max-width: 768px) { .page-banner { padding: 56px 16px; } .page-banner h1 { font-size: 2rem; } .page-banner p { font-size: 1rem; } .servico-section { padding: 56px 16px; } .servico-title { font-size: 1.45rem; } .servico-content p { font-size: 1rem; text-align: left; } }
-  </style>
-</head>
-<body>
-  <div data-animation="default" class="header w-nav" role="banner"><div class="container"><div class="main-container w-container"><div class="nav-wrapper">
-    <a href="index.html" class="nav-logo w-nav-brand"><img loading="lazy" src="images/logo-asas.png" alt="Asas Familiar" class="site-logo" /></a>
-    <nav role="navigation" class="menu-wrapper w-nav-menu" style="display: flex; width: 100%; justify-content: space-between; align-items: center;"><div class="menu-item-wrapper"><div class="menu-items"><a href="index.html" class="menu-link" style="color: #003B70;">Home</a><div class="dropdown-menu-wrapper" style="position: relative;"><a href="#" class="menu-link dropdown-trigger" style="color: #003B70;">Quem Somos ▾</a><div class="dropdown-menu"><a href="quem-somos.html" class="dropdown-link">Sobre nós</a><a href="historia.html" class="dropdown-link">Nossa história</a><a href="diretoria.html" class="dropdown-link">Diretoria</a><a href="parceiros.html" class="dropdown-link">Parceiros</a></div></div><a href="servicos.html" class="menu-link" style="color: #003B70;">Nossos Serviços</a><a href="contato.html" class="menu-link" style="color: #003B70;">Contato</a></div></div><div class="nav-button-wrapper"><a href="https://wa.me/5551980201159" target="_blank" rel="noopener noreferrer" class="primary-button w-inline-block">Falar com Atendente</a></div></nav>
-    <div class="nav-trigger w-nav-button"><span></span><span></span><span></span></div>
-  </div></div></div></div>
-
-  <section class="page-banner"><h1>Serviços Funerários</h1><p>Atendimento completo para cremação e sepultamento, com respeito à história e aos valores de cada família.</p></section>
-  <section class="servico-section">
-    <div class="servico-logo-wrapper"><img src="images/favicon.png" alt="ASAS Familiar" class="servico-logo" /></div>
-    <h2 class="servico-title">Serviços Funerários</h2>
-    <div class="servico-content">
-      <p>Nos <strong>Serviços Funerários</strong>, cuidamos de todas as etapas com sensibilidade, organização e comprometimento. Estruturamos os procedimentos para que a família tenha tranquilidade e tempo para viver o luto com dignidade.</p>
-      <p>Realizamos suporte para velório, traslado, sepultamento e cremação, respeitando crenças, rituais e preferências. Cada despedida é conduzida de forma personalizada, com atenção aos detalhes que fazem diferença nesse momento.</p>
-      <p>Com equipe preparada e atendimento humanizado, garantimos que tudo aconteça com ética, transparência e acolhimento do início ao fim.</p>
+  <head>
+    <meta charset="utf-8" />
+    <title>Serviços Funerários - ASAS Familiar</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="css/site-shared.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/variables.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/typography.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/padrao-historia.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/responsive-overrides.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="images/favicon.png?v=1"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .header .menu-link:hover,
+      .header .menu-link:active,
+      .header .menu-link:focus,
+      .header .dropdown-trigger:hover,
+      .header .dropdown-trigger:active,
+      .header .dropdown-trigger:focus,
+      .header .dropdown-menu-wrapper > a:hover,
+      .header .dropdown-menu-wrapper > a:active,
+      .header .dropdown-menu-wrapper > a:focus,
+      .header .nav-logo:hover,
+      .header .nav-logo:active,
+      .header .nav-logo:focus,
+      .header .w-nav-brand:hover,
+      .header .w-nav-brand:active,
+      .header .w-nav-brand:focus,
+      .footer a:hover,
+      .footer a:active,
+      .footer a:focus,
+      .footer a:focus-visible {
+        background: transparent !important;
+        background-color: transparent !important;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+      .page-banner {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+        padding: 80px 20px;
+        text-align: center;
+        color: #fff;
+      }
+      .page-banner h1 {
+        font-size: 3rem;
+        margin: 0 0 20px 0;
+        color: #fff;
+      }
+      .page-banner p {
+        font-size: 1.125rem;
+        max-width: 900px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+      .servico-section {
+        padding: 80px 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .servico-logo-wrapper {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+      .servico-logo {
+        max-width: 96px;
+        width: 100%;
+        height: auto;
+      }
+      .servico-title {
+        color: var(--primary-color);
+        font-size: 1.875rem;
+        font-weight: 700;
+        margin: 0 0 24px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+      .servico-content p {
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+      @media (max-width: 768px) {
+        .page-banner {
+          padding: 56px 16px;
+        }
+        .page-banner h1 {
+          font-size: 2rem;
+        }
+        .page-banner p {
+          font-size: 1rem;
+        }
+        .servico-section {
+          padding: 56px 16px;
+        }
+        .servico-title {
+          font-size: 1.5rem;
+        }
+        .servico-content p {
+          font-size: 1rem;
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div data-animation="default" class="header w-nav" role="banner">
+      <div class="container">
+        <div class="main-container w-container">
+          <div class="nav-wrapper">
+            <a href="index.html" class="nav-logo w-nav-brand"
+              ><img
+                loading="lazy"
+                src="images/logo-asas.png"
+                alt="Asas Familiar"
+                class="site-logo"
+            /></a>
+            <nav
+              role="navigation"
+              class="menu-wrapper w-nav-menu"
+              style="
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div class="menu-item-wrapper">
+                <div class="menu-items">
+                  <a href="index.html" class="menu-link"
+                    >Home</a
+                  >
+                  <div class="dropdown-menu-wrapper" style="position: relative">
+                    <a
+                      href="#"
+                      class="menu-link dropdown-trigger"
+                     
+                      >Quem Somos ▾</a
+                    >
+                    <div class="dropdown-menu">
+                      <a href="quem-somos.html" class="dropdown-link"
+                        >Sobre nós</a
+                      ><a href="historia.html" class="dropdown-link"
+                        >Nossa história</a
+                      ><a href="diretoria.html" class="dropdown-link"
+                        >Diretoria</a
+                      ><a href="parceiros.html" class="dropdown-link"
+                        >Parceiros</a
+                      >
+                    </div>
+                  </div>
+                  <a
+                    href="servicos.html"
+                    class="menu-link"
+                   
+                    >Nossos Serviços</a
+                  ><a
+                    href="contato.html"
+                    class="menu-link"
+                   
+                    >Contato</a
+                  >
+                </div>
+              </div>
+              <div class="nav-button-wrapper">
+                <a
+                  href="https://wa.me/5551980201159"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="primary-button w-inline-block"
+                  >Falar com Atendente</a
+                >
+              </div>
+            </nav>
+            <div class="nav-trigger w-nav-button">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
 
-  <section class="footer" id="contato"><div class="footer-content footer-flex"><img loading="lazy" src="images/logo-asas.png" alt="Logotipo da ASAS Familiar, representando assistência social e amparo familiar" class="footer-logo" /><div class="footer-text"><p><strong>ASAS Familiar</strong><br>Associação de Assistência Social e Amparo Familiar.<br>Av. Borges de Medeiros Nº410, Sala 710 / Centro - Porto Alegre - RS<br>Tel: (51) 98020-1159<br>E-mail: contato@asasfamiliar.com.br</p></div></div><div class="footer-bottom footer-bottom-small"><p>© 2026 ASAS Familiar. Todos os direitos reservados. <a href="termo-de-uso.html">Termo de Uso</a> | <a href="politica-de-privacidade.html">Política de Privacidade</a></p></div></section>
+    <section class="page-banner">
+      <h1>Serviços Funerários</h1>
+      <p>
+        Atendimento completo para cremação e sepultamento, com respeito à
+        história e aos valores de cada família.
+      </p>
+    </section>
+    <section class="servico-section">
+      <div class="servico-logo-wrapper">
+        <img
+          src="images/favicon.png"
+          alt="ASAS Familiar"
+          class="servico-logo"
+        />
+      </div>
+      <h2 class="servico-title">Serviços Funerários</h2>
+      <div class="servico-content">
+        <p>
+          Nos <strong>Serviços Funerários</strong>, cuidamos de todas as etapas
+          com sensibilidade, organização e comprometimento. Estruturamos os
+          procedimentos para que a família tenha tranquilidade e tempo para
+          viver o luto com dignidade.
+        </p>
+        <p>
+          Realizamos suporte para velório, traslado, sepultamento e cremação,
+          respeitando crenças, rituais e preferências. Cada despedida é
+          conduzida de forma personalizada, com atenção aos detalhes que fazem
+          diferença nesse momento.
+        </p>
+        <p>
+          Com equipe preparada e atendimento humanizado, garantimos que tudo
+          aconteça com ética, transparência e acolhimento do início ao fim.
+        </p>
+      </div>
+    </section>
 
-  <script src="js/jquery.js" type="text/javascript"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var navTrigger = document.querySelector('.nav-trigger');
-      var menuWrapper = document.querySelector('.menu-wrapper');
-      if (navTrigger && menuWrapper) { navTrigger.addEventListener('click', function (e) { e.preventDefault(); navTrigger.classList.toggle('active'); menuWrapper.classList.toggle('open'); }); var menuLinks = menuWrapper.querySelectorAll('.menu-link:not(.dropdown-trigger), .dropdown-link'); menuLinks.forEach(function (link) { link.addEventListener('click', function () { navTrigger.classList.remove('active'); menuWrapper.classList.remove('open'); }); }); document.addEventListener('click', function (e) { if (!navTrigger.contains(e.target) && !menuWrapper.contains(e.target)) { navTrigger.classList.remove('active'); menuWrapper.classList.remove('open'); } }); }
-      var dropdownTrigger = document.querySelector('.dropdown-trigger');
-      var dropdownMenu = document.querySelector('.dropdown-menu');
-      var dropdownWrapper = document.querySelector('.dropdown-menu-wrapper');
-      if (dropdownTrigger) { dropdownTrigger.addEventListener('click', function (e) { e.preventDefault(); dropdownMenu.classList.toggle('show'); }); }
-      document.addEventListener('click', function (e) { if (dropdownWrapper && !dropdownWrapper.contains(e.target)) { dropdownMenu.classList.remove('show'); } });
-    });
-  </script>
-</body>
+    <section class="footer" id="contato">
+      <div class="footer-content footer-flex">
+        <img
+          loading="lazy"
+          src="images/logo-asas.png"
+          alt="Logotipo da ASAS Familiar, representando assistência social e amparo familiar"
+          class="footer-logo"
+        />
+        <div class="footer-text">
+          <p>
+            <strong>ASAS Familiar</strong><br />Associação de Assistência Social
+            e Amparo Familiar.<br />Av. Borges de Medeiros Nº410, Sala 710 /
+            Centro - Porto Alegre - RS<br />Tel: (51) 98020-1159<br />E-mail:
+            contato@asasfamiliar.com.br
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom footer-bottom-small">
+        <p>
+          © 2026 ASAS Familiar. Todos os direitos reservados.
+          <a href="termo-de-uso.html">Termo de Uso</a> |
+          <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        </p>
+      </div>
+    </section>
+
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var navTrigger = document.querySelector(".nav-trigger");
+        var menuWrapper = document.querySelector(".menu-wrapper");
+        if (navTrigger && menuWrapper) {
+          navTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            navTrigger.classList.toggle("active");
+            menuWrapper.classList.toggle("open");
+          });
+          var menuLinks = menuWrapper.querySelectorAll(
+            ".menu-link:not(.dropdown-trigger), .dropdown-link",
+          );
+          menuLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+              navTrigger.classList.remove("active");
+              menuWrapper.classList.remove("open");
+            });
+          });
+          document.addEventListener("click", function (e) {
+            if (
+              !navTrigger.contains(e.target) &&
+              !menuWrapper.contains(e.target)
+            ) {
+              navTrigger.classList.remove("active");
+              menuWrapper.classList.remove("open");
+            }
+          });
+        }
+        var dropdownTrigger = document.querySelector(".dropdown-trigger");
+        var dropdownMenu = document.querySelector(".dropdown-menu");
+        var dropdownWrapper = document.querySelector(".dropdown-menu-wrapper");
+        if (dropdownTrigger) {
+          dropdownTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            dropdownMenu.classList.toggle("show");
+          });
+        }
+        document.addEventListener("click", function (e) {
+          if (dropdownWrapper && !dropdownWrapper.contains(e.target)) {
+            dropdownMenu.classList.remove("show");
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

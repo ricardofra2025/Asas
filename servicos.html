@@ -1,413 +1,546 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nossos Serviços - ASAS Familiar</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="css/site-shared.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/variables.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/typography.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/padrao-historia.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/responsive-overrides.css?v=20260226"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <title>Nossos Serviços - ASAS Familiar</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link href="css/site-shared.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/variables.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/typography.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/padrao-historia.css?v=20260226" rel="stylesheet" type="text/css" />
-  <link href="css/responsive-overrides.css?v=20260226" rel="stylesheet" type="text/css" />
+    <link
+      href="images/favicon.png?v=1"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      href="images/favicon.png?v=1"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link href="images/favicon.png?v=1" rel="shortcut icon" type="image/png" />
 
-  <link href="images/favicon.png?v=1" rel="icon" type="image/png" sizes="32x32" />
-  <link href="images/favicon.png?v=1" rel="apple-touch-icon" sizes="180x180" />
-  <link href="images/favicon.png?v=1" rel="shortcut icon" type="image/png" />
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    .header .menu-link:hover,
-    .header .menu-link:active,
-    .header .menu-link:focus,
-    .header .dropdown-trigger:hover,
-    .header .dropdown-trigger:active,
-    .header .dropdown-trigger:focus,
-    .header .dropdown-menu-wrapper>a:hover,
-    .header .dropdown-menu-wrapper>a:active,
-    .header .dropdown-menu-wrapper>a:focus,
-    .header .nav-logo:hover,
-    .header .nav-logo:active,
-    .header .nav-logo:focus,
-    .header .w-nav-brand:hover,
-    .header .w-nav-brand:active,
-    .header .w-nav-brand:focus {
-      background: transparent !important;
-      background-color: transparent !important;
-    }
-
-    .page-banner {
-      background: linear-gradient(135deg, #003B70 0%, #004b85 100%);
-      padding: 80px 20px;
-      text-align: center;
-      color: #fff;
-    }
-
-    .page-banner h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin: 0 0 20px 0;
-      color: #fff;
-    }
-
-    .page-banner p {
-      font-size: 1.2rem;
-      max-width: 860px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    .servicos-section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 38px;
-    }
-
-    .servico-card {
-      display: grid;
-      grid-template-columns: minmax(280px, 460px) 1fr;
-      align-items: center;
-      gap: 34px;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 6px 24px rgba(0, 59, 112, 0.08);
-      padding: 26px;
-    }
-
-    .servico-card.reverse {
-      grid-template-columns: 1fr minmax(280px, 460px);
-    }
-
-    .servico-card.reverse .servico-imagem-wrapper {
-      order: 2;
-    }
-
-    .servico-card.reverse .servico-info {
-      order: 1;
-    }
-
-    .servico-imagem-wrapper {
-      border-radius: 14px;
-      overflow: hidden;
-      min-height: 230px;
-      background: #e9eef2;
-    }
-
-    .servico-imagem {
-      width: 100%;
-      height: 100%;
-      min-height: 230px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .servico-info h2 {
-      font-size: 1.9rem;
-      margin: 0 0 14px 0;
-      color: #003B70;
-    }
-
-    .servico-info p {
-      font-size: 1.06rem;
-      color: #444;
-      line-height: 1.8;
-      margin: 0 0 18px 0;
-      text-align: left;
-    }
-
-    .servico-cta {
-      display: inline-block;
-      background: #003B70;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 8px;
-      padding: 12px 20px;
-      transition: background .25s ease;
-    }
-
-    .servico-cta:hover {
-      background: #e74c3c;
-    }
-
-    @media (max-width: 900px) {
-      .servico-card,
-      .servico-card.reverse {
-        grid-template-columns: 1fr;
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
       }
 
-      .servico-card.reverse .servico-imagem-wrapper,
-      .servico-card.reverse .servico-info {
-        order: initial;
+      .header .menu-link:hover,
+      .header .menu-link:active,
+      .header .menu-link:focus,
+      .header .dropdown-trigger:hover,
+      .header .dropdown-trigger:active,
+      .header .dropdown-trigger:focus,
+      .header .dropdown-menu-wrapper > a:hover,
+      .header .dropdown-menu-wrapper > a:active,
+      .header .dropdown-menu-wrapper > a:focus,
+      .header .nav-logo:hover,
+      .header .nav-logo:active,
+      .header .nav-logo:focus,
+      .header .w-nav-brand:hover,
+      .header .w-nav-brand:active,
+      .header .w-nav-brand:focus {
+        background: transparent !important;
+        background-color: transparent !important;
       }
 
-      .servico-imagem,
-      .servico-imagem-wrapper {
-        min-height: 210px;
-      }
-
-      .servico-info h2 {
-        font-size: 1.55rem;
-      }
-    }
-
-    @media (max-width: 768px) {
       .page-banner {
-        padding: 56px 16px;
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+        padding: 80px 20px;
+        text-align: center;
+        color: #fff;
       }
 
       .page-banner h1 {
-        font-size: 2rem;
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0 0 20px 0;
+        color: #fff;
       }
 
       .page-banner p {
-        font-size: 1rem;
+        font-size: 1.125rem;
+        max-width: 860px;
+        margin: 0 auto;
+        line-height: 1.6;
       }
 
       .servicos-section {
-        padding: 56px 16px;
-        gap: 26px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 80px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
       }
 
       .servico-card {
-        padding: 16px;
+        display: grid;
+        grid-template-columns: minmax(280px, 460px) 1fr;
+        align-items: center;
+        gap: 34px;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 6px 24px rgba(0, 59, 112, 0.08);
+        padding: 26px;
+      }
+
+      .servico-card.reverse {
+        grid-template-columns: 1fr minmax(280px, 460px);
+      }
+
+      .servico-card.reverse .servico-imagem-wrapper {
+        order: 2;
+      }
+
+      .servico-card.reverse .servico-info {
+        order: 1;
+      }
+
+      .servico-imagem-wrapper {
         border-radius: 14px;
-        gap: 18px;
+        overflow: hidden;
+        min-height: 230px;
+        background: #e9eef2;
+      }
+
+      .servico-imagem {
+        width: 100%;
+        height: 100%;
+        min-height: 230px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .servico-info h2 {
+        font-size: 1.875rem;
+        margin: 0 0 14px 0;
+        color: var(--primary-color);
       }
 
       .servico-info p {
-        font-size: 1rem;
+        font-size: 1.125rem;
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin: 0 0 18px 0;
+        text-align: left;
       }
 
       .servico-cta {
-        width: 100%;
-        text-align: center;
+        display: inline-block;
+        background: var(--primary-color);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 8px;
+        padding: 12px 20px;
+        transition: background 0.25s ease;
       }
-    }
 
-    @media (max-width: 480px) {
-      .servico-info h2 {
-        font-size: 1.32rem;
+      .servico-cta:hover {
+        background: var(--secondary-color);
       }
 
-      .servico-imagem,
-      .servico-imagem-wrapper {
-        min-height: 180px;
+      @media (max-width: 900px) {
+        .servico-card,
+        .servico-card.reverse {
+          grid-template-columns: 1fr;
+        }
+
+        .servico-card.reverse .servico-imagem-wrapper,
+        .servico-card.reverse .servico-info {
+          order: initial;
+        }
+
+        .servico-imagem,
+        .servico-imagem-wrapper {
+          min-height: 210px;
+        }
+
+        .servico-info h2 {
+          font-size: 1.5rem;
+        }
       }
-    }
-  </style>
-</head>
 
-<body>
+      @media (max-width: 768px) {
+        .page-banner {
+          padding: 56px 16px;
+        }
 
-  <div data-animation="default" class="header w-nav" role="banner">
-    <div class="container">
-      <div class="main-container w-container">
-        <div class="nav-wrapper">
+        .page-banner h1 {
+          font-size: 2rem;
+        }
 
-          <a href="index.html" class="nav-logo w-nav-brand">
-            <img loading="lazy" src="images/logo-asas.png" alt="Asas Familiar" class="site-logo" />
-          </a>
+        .page-banner p {
+          font-size: 1rem;
+        }
 
-          <nav role="navigation" class="menu-wrapper w-nav-menu"
-            style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
+        .servicos-section {
+          padding: 56px 16px;
+          gap: 26px;
+        }
 
-            <div class="menu-item-wrapper">
-              <div class="menu-items">
-                <a href="index.html" class="menu-link" style="color: #003B70;">Home</a>
+        .servico-card {
+          padding: 16px;
+          border-radius: 14px;
+          gap: 18px;
+        }
 
-                <div class="dropdown-menu-wrapper" style="position: relative;">
-                  <a href="#" class="menu-link dropdown-trigger" style="color: #003B70;">Quem Somos ▾</a>
-                  <div class="dropdown-menu">
-                    <a href="quem-somos.html" class="dropdown-link">Sobre nós</a>
-                    <a href="historia.html" class="dropdown-link">Nossa história</a>
-                    <a href="diretoria.html" class="dropdown-link">Diretoria</a>
-                    <a href="parceiros.html" class="dropdown-link">Parceiros</a>
+        .servico-info p {
+          font-size: 1rem;
+        }
+
+        .servico-cta {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .servico-info h2 {
+          font-size: 1.25rem;
+        }
+
+        .servico-imagem,
+        .servico-imagem-wrapper {
+          min-height: 180px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div data-animation="default" class="header w-nav" role="banner">
+      <div class="container">
+        <div class="main-container w-container">
+          <div class="nav-wrapper">
+            <a href="index.html" class="nav-logo w-nav-brand">
+              <img
+                loading="lazy"
+                src="images/logo-asas.png"
+                alt="Asas Familiar"
+                class="site-logo"
+              />
+            </a>
+
+            <nav
+              role="navigation"
+              class="menu-wrapper w-nav-menu"
+              style="
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div class="menu-item-wrapper">
+                <div class="menu-items">
+                  <a href="index.html" class="menu-link"
+                    >Home</a
+                  >
+
+                  <div class="dropdown-menu-wrapper" style="position: relative">
+                    <a
+                      href="#"
+                      class="menu-link dropdown-trigger"
+                     
+                      >Quem Somos ▾</a
+                    >
+                    <div class="dropdown-menu">
+                      <a href="quem-somos.html" class="dropdown-link"
+                        >Sobre nós</a
+                      >
+                      <a href="historia.html" class="dropdown-link"
+                        >Nossa história</a
+                      >
+                      <a href="diretoria.html" class="dropdown-link"
+                        >Diretoria</a
+                      >
+                      <a href="parceiros.html" class="dropdown-link"
+                        >Parceiros</a
+                      >
+                    </div>
                   </div>
+
+                  <a
+                    href="servicos.html"
+                    class="menu-link"
+                   
+                    >Nossos Serviços</a
+                  >
+                  <a
+                    href="contato.html"
+                    class="menu-link"
+                   
+                    >Contato</a
+                  >
                 </div>
-
-                <a href="servicos.html" class="menu-link" style="color: #003B70;">Nossos Serviços</a>
-                <a href="contato.html" class="menu-link" style="color: #003B70;">Contato</a>
               </div>
+
+              <div class="nav-button-wrapper">
+                <a
+                  href="https://wa.me/5551980201159"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="primary-button w-inline-block"
+                >
+                  Falar com Atendente
+                </a>
+              </div>
+            </nav>
+
+            <div class="nav-trigger w-nav-button">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-
-            <div class="nav-button-wrapper">
-              <a href="https://wa.me/5551980201159" target="_blank" rel="noopener noreferrer"
-                class="primary-button w-inline-block">
-                Falar com Atendente
-              </a>
-            </div>
-
-          </nav>
-
-          <div class="nav-trigger w-nav-button">
-            <span></span>
-            <span></span>
-            <span></span>
           </div>
-
         </div>
       </div>
     </div>
-  </div>
 
-  <section class="page-banner">
-    <h1>Nossos Serviços</h1>
-    <p>Atendimento completo com acolhimento, respeito e estrutura para cuidar da sua família em todas as etapas.</p>
-  </section>
+    <section class="page-banner">
+      <h1>Nossos Serviços</h1>
+      <p>
+        Atendimento completo com acolhimento, respeito e estrutura para cuidar
+        da sua família em todas as etapas.
+      </p>
+    </section>
 
-  <section class="servicos-section">
-    <article class="servico-card">
-      <div class="servico-imagem-wrapper">
-        <img src="images/why-20choose-20image.png" alt="Apoio Familiar" class="servico-imagem" />
-      </div>
-      <div class="servico-info">
-        <h2>Apoio Familiar</h2>
-        <p>Suporte contínuo para a família com acolhimento emocional, orientação prática e acompanhamento próximo em todos os momentos.</p>
-        <a href="apoio-familiar.html" class="servico-cta">Saiba mais</a>
-      </div>
-    </article>
+    <section class="servicos-section">
+      <article class="servico-card">
+        <div class="servico-imagem-wrapper">
+          <img
+            src="images/why-20choose-20image.png"
+            alt="Apoio Familiar"
+            class="servico-imagem"
+          />
+        </div>
+        <div class="servico-info">
+          <h2>Apoio Familiar</h2>
+          <p>
+            Suporte contínuo para a família com acolhimento emocional,
+            orientação prática e acompanhamento próximo em todos os momentos.
+          </p>
+          <a href="apoio-familiar.html" class="servico-cta">Saiba mais</a>
+        </div>
+      </article>
 
-    <article class="servico-card reverse">
-      <div class="servico-imagem-wrapper">
-        <img src="images/why-20choose-20image.png" alt="Orientação Jurídica" class="servico-imagem" />
-      </div>
-      <div class="servico-info">
-        <h2>Orientação Jurídica</h2>
-        <p>Direcionamento claro para documentação, inventário e procedimentos legais, garantindo segurança e agilidade para a família.</p>
-        <a href="orientacao-juridica.html" class="servico-cta">Saiba mais</a>
-      </div>
-    </article>
+      <article class="servico-card reverse">
+        <div class="servico-imagem-wrapper">
+          <img
+            src="images/why-20choose-20image.png"
+            alt="Orientação Jurídica"
+            class="servico-imagem"
+          />
+        </div>
+        <div class="servico-info">
+          <h2>Orientação Jurídica</h2>
+          <p>
+            Direcionamento claro para documentação, inventário e procedimentos
+            legais, garantindo segurança e agilidade para a família.
+          </p>
+          <a href="orientacao-juridica.html" class="servico-cta">Saiba mais</a>
+        </div>
+      </article>
 
-    <article class="servico-card">
-      <div class="servico-imagem-wrapper">
-        <img src="images/why-20choose-20image.png" alt="Serviços Funerários" class="servico-imagem" />
-      </div>
-      <div class="servico-info">
-        <h2>Serviços Funerários</h2>
-        <p>Organização de velório, sepultamento e cremação com cuidado integral, atenção aos detalhes e respeito à história de cada família.</p>
-        <a href="servicos-funerarios.html" class="servico-cta">Saiba mais</a>
-      </div>
-    </article>
+      <article class="servico-card">
+        <div class="servico-imagem-wrapper">
+          <img
+            src="images/why-20choose-20image.png"
+            alt="Serviços Funerários"
+            class="servico-imagem"
+          />
+        </div>
+        <div class="servico-info">
+          <h2>Serviços Funerários</h2>
+          <p>
+            Organização de velório, sepultamento e cremação com cuidado
+            integral, atenção aos detalhes e respeito à história de cada
+            família.
+          </p>
+          <a href="servicos-funerarios.html" class="servico-cta">Saiba mais</a>
+        </div>
+      </article>
 
-    <article class="servico-card reverse">
-      <div class="servico-imagem-wrapper">
-        <img src="images/why-20choose-20image.png" alt="Cerimonial" class="servico-imagem" />
-      </div>
-      <div class="servico-info">
-        <h2>Cerimonial</h2>
-        <p>Despedidas personalizadas para homenagear a trajetória de vida com significado, sensibilidade e memória afetiva.</p>
-        <a href="cerimonial.html" class="servico-cta">Saiba mais</a>
-      </div>
-    </article>
+      <article class="servico-card reverse">
+        <div class="servico-imagem-wrapper">
+          <img
+            src="images/why-20choose-20image.png"
+            alt="Cerimonial"
+            class="servico-imagem"
+          />
+        </div>
+        <div class="servico-info">
+          <h2>Cerimonial</h2>
+          <p>
+            Despedidas personalizadas para homenagear a trajetória de vida com
+            significado, sensibilidade e memória afetiva.
+          </p>
+          <a href="cerimonial.html" class="servico-cta">Saiba mais</a>
+        </div>
+      </article>
 
-    <article class="servico-card">
-      <div class="servico-imagem-wrapper">
-        <img src="images/why-20choose-20image.png" alt="Saúde e Cuidados" class="servico-imagem" />
+      <article class="servico-card">
+        <div class="servico-imagem-wrapper">
+          <img
+            src="images/why-20choose-20image.png"
+            alt="Saúde e Cuidados"
+            class="servico-imagem"
+          />
+        </div>
+        <div class="servico-info">
+          <h2>Saúde e Cuidados</h2>
+          <p>
+            Apoio para o bem-estar físico e emocional da família, com orientação
+            e encaminhamentos para uma travessia mais segura do luto.
+          </p>
+          <a href="saude-e-cuidados.html" class="servico-cta">Saiba mais</a>
+        </div>
+      </article>
+
+      <article class="servico-card reverse">
+        <div class="servico-imagem-wrapper">
+          <img
+            src="images/why-20choose-20image.png"
+            alt="Animais de Estimação"
+            class="servico-imagem"
+          />
+        </div>
+        <div class="servico-info">
+          <h2>Animais de Estimação</h2>
+          <p>
+            Planos e assistência para pets com acolhimento e respeito ao vínculo
+            afetivo que faz parte da história da família.
+          </p>
+          <a href="animais-de-estimacao.html" class="servico-cta">Saiba mais</a>
+        </div>
+      </article>
+
+      <article class="servico-card">
+        <div class="servico-imagem-wrapper">
+          <img
+            src="images/why-20choose-20image.png"
+            alt="Planos Familiares"
+            class="servico-imagem"
+          />
+        </div>
+        <div class="servico-info">
+          <h2>Planos Familiares</h2>
+          <p>
+            Soluções preventivas para garantir previsibilidade, tranquilidade e
+            proteção para a família no presente e no futuro.
+          </p>
+          <a href="planos-familiares.html" class="servico-cta">Saiba mais</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="footer" id="contato">
+      <div class="footer-content footer-flex">
+        <img
+          loading="lazy"
+          src="images/logo-asas.png"
+          alt="Logotipo da ASAS Familiar, representando assistência social e amparo familiar"
+          class="footer-logo"
+        />
+
+        <div class="footer-text">
+          <p>
+            <strong>ASAS Familiar</strong><br />
+            Associação de Assistência Social e Amparo Familiar.<br />
+            Av. Borges de Medeiros Nº410, Sala 710 / Centro - Porto Alegre -
+            RS<br />
+            Tel: (51) 98020-1159<br />
+            E-mail: contato@asasfamiliar.com.br
+          </p>
+        </div>
       </div>
-      <div class="servico-info">
-        <h2>Saúde e Cuidados</h2>
-        <p>Apoio para o bem-estar físico e emocional da família, com orientação e encaminhamentos para uma travessia mais segura do luto.</p>
-        <a href="saude-e-cuidados.html" class="servico-cta">Saiba mais</a>
+
+      <div class="footer-bottom footer-bottom-small">
+        <p>
+          © 2026 ASAS Familiar. Todos os direitos reservados.
+          <a href="termo-de-uso.html">Termo de Uso</a> |
+          <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        </p>
       </div>
-    </article>
+    </section>
 
-    <article class="servico-card reverse">
-      <div class="servico-imagem-wrapper">
-        <img src="images/why-20choose-20image.png" alt="Animais de Estimação" class="servico-imagem" />
-      </div>
-      <div class="servico-info">
-        <h2>Animais de Estimação</h2>
-        <p>Planos e assistência para pets com acolhimento e respeito ao vínculo afetivo que faz parte da história da família.</p>
-        <a href="animais-de-estimacao.html" class="servico-cta">Saiba mais</a>
-      </div>
-    </article>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var navTrigger = document.querySelector(".nav-trigger");
+        var menuWrapper = document.querySelector(".menu-wrapper");
 
-    <article class="servico-card">
-      <div class="servico-imagem-wrapper">
-        <img src="images/why-20choose-20image.png" alt="Planos Familiares" class="servico-imagem" />
-      </div>
-      <div class="servico-info">
-        <h2>Planos Familiares</h2>
-        <p>Soluções preventivas para garantir previsibilidade, tranquilidade e proteção para a família no presente e no futuro.</p>
-        <a href="planos-familiares.html" class="servico-cta">Saiba mais</a>
-      </div>
-    </article>
-  </section>
-
-  <section class="footer" id="contato">
-    <div class="footer-content footer-flex">
-      <img loading="lazy" src="images/logo-asas.png" alt="Logotipo da ASAS Familiar, representando assistência social e amparo familiar" class="footer-logo" />
-
-      <div class="footer-text">
-        <p><strong>ASAS Familiar</strong><br>
-        Associação de Assistência Social e Amparo Familiar.<br>
-        Av. Borges de Medeiros Nº410, Sala 710 / Centro - Porto Alegre - RS<br>
-        Tel: (51) 98020-1159<br>
-        E-mail: contato@asasfamiliar.com.br</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom footer-bottom-small">
-      <p>© 2026 ASAS Familiar. Todos os direitos reservados. <a href="termo-de-uso.html">Termo de Uso</a> | <a href="politica-de-privacidade.html">Política de Privacidade</a></p>
-    </div>
-  </section>
-
-  <script src="js/jquery.js" type="text/javascript"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var navTrigger = document.querySelector('.nav-trigger');
-      var menuWrapper = document.querySelector('.menu-wrapper');
-
-      if (navTrigger && menuWrapper) {
-        navTrigger.addEventListener('click', function (e) {
-          e.preventDefault();
-          navTrigger.classList.toggle('active');
-          menuWrapper.classList.toggle('open');
-        });
-
-        var menuLinks = menuWrapper.querySelectorAll('.menu-link:not(.dropdown-trigger), .dropdown-link');
-        menuLinks.forEach(function (link) {
-          link.addEventListener('click', function () {
-            navTrigger.classList.remove('active');
-            menuWrapper.classList.remove('open');
+        if (navTrigger && menuWrapper) {
+          navTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            navTrigger.classList.toggle("active");
+            menuWrapper.classList.toggle("open");
           });
-        });
 
-        document.addEventListener('click', function (e) {
-          if (!navTrigger.contains(e.target) && !menuWrapper.contains(e.target)) {
-            navTrigger.classList.remove('active');
-            menuWrapper.classList.remove('open');
+          var menuLinks = menuWrapper.querySelectorAll(
+            ".menu-link:not(.dropdown-trigger), .dropdown-link",
+          );
+          menuLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+              navTrigger.classList.remove("active");
+              menuWrapper.classList.remove("open");
+            });
+          });
+
+          document.addEventListener("click", function (e) {
+            if (
+              !navTrigger.contains(e.target) &&
+              !menuWrapper.contains(e.target)
+            ) {
+              navTrigger.classList.remove("active");
+              menuWrapper.classList.remove("open");
+            }
+          });
+        }
+
+        var dropdownTrigger = document.querySelector(".dropdown-trigger");
+        var dropdownMenu = document.querySelector(".dropdown-menu");
+        var dropdownWrapper = document.querySelector(".dropdown-menu-wrapper");
+
+        if (dropdownTrigger) {
+          dropdownTrigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            dropdownMenu.classList.toggle("show");
+          });
+        }
+
+        document.addEventListener("click", function (e) {
+          if (dropdownWrapper && !dropdownWrapper.contains(e.target)) {
+            dropdownMenu.classList.remove("show");
           }
         });
-      }
-
-      var dropdownTrigger = document.querySelector('.dropdown-trigger');
-      var dropdownMenu = document.querySelector('.dropdown-menu');
-      var dropdownWrapper = document.querySelector('.dropdown-menu-wrapper');
-
-      if (dropdownTrigger) {
-        dropdownTrigger.addEventListener('click', function (e) {
-          e.preventDefault();
-          dropdownMenu.classList.toggle('show');
-        });
-      }
-
-      document.addEventListener('click', function (e) {
-        if (dropdownWrapper && !dropdownWrapper.contains(e.target)) {
-          dropdownMenu.classList.remove('show');
-        }
       });
-    });
-  </script>
-
-</body>
-
+    </script>
+  </body>
 </html>
